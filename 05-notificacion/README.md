@@ -21,6 +21,12 @@ Por precaución, se solicita a todos los empleados:
 
 El equipo de ciberseguridad está investigando lo ocurrido y aplicando las medidas necesarias.
 
+### Qué datos debe contener el aviso interno
+
+El mensaje tendrá un lenguaje claro y explicará qué se ha detectado, qué se debe evitar y cómo comunicar nuevas señales. Se indicará el canal oficial de informática y, si existe, una persona responsable de coordinar los avisos.
+
+No compartiremos por correo masivo contraseñas, datos de clientes ni detalles técnicos que puedan facilitar nuevos ataques. Cuando haya información confirmada, se comunicarán las novedades relevantes.
+
 ## 5.2. Notificación a la AEPD
 
 La **Agencia Española de Protección de Datos (AEPD)** es el organismo encargado de supervisar el cumplimiento de la normativa de protección de datos.
@@ -32,6 +38,14 @@ Según el Reglamento General de Protección de Datos (RGPD):
 - Todas las brechas deberán quedar documentadas, aunque no sea obligatorio notificarlas.
 
 En TecnoGestión S. L. investigaremos si realmente se han visto comprometidos datos de clientes y evaluaremos la obligación de notificar el incidente.
+
+### Cómo valorar la posible brecha de datos
+
+En nuestro escenario todavía **no está confirmado** que los datos de los clientes hayan salido de la empresa. Investigaremos qué carpetas y sistemas contienen datos personales, qué cuentas accedieron y si existen evidencias de copia o envío.
+
+Si se confirma una brecha, evaluaremos sus consecuencias para las personas: cantidad y tipo de datos, posibilidad de identificación, riesgo de fraude y medidas de protección existentes.
+
+La decisión sobre notificación deberá documentarse, junto con la fecha en la que la empresa tuvo constancia de la brecha. El plazo general de 72 horas se refiere a la comunicación a la autoridad cuando exista obligación, y no debe confundirse con un plazo para terminar toda la investigación.
 
 ## 5.3. Organismos CERT y CSIRT
 
@@ -45,6 +59,12 @@ Sus principales funciones son:
 - Publicar alertas y recomendaciones.
 - Colaborar con otras organizaciones.
 
+### Cuándo pediríamos ayuda
+
+Si el equipo interno no consigue identificar o contener la amenaza, podrá solicitar orientación a un equipo de respuesta apropiado. Para facilitar la ayuda, se preparará un resumen del incidente: fecha, sistemas afectados, alertas, acciones realizadas e indicadores investigados.
+
+Es importante no enviar información personal innecesaria ni compartir muestras peligrosas por canales no autorizados.
+
 ## 5.4. Equipos de respuesta en España
 
 | Organismo | Función |
@@ -55,6 +75,12 @@ Sus principales funciones son:
 **INCIBE-CERT** sería el organismo de referencia para TecnoGestión S. L. al tratarse de una empresa privada.
 
 El CCN-CERT es otro equipo nacional importante, aunque está orientado principalmente al sector público.
+
+### Qué organismo encaja mejor con el caso
+
+TecnoGestión S. L. es una empresa privada, por lo que **INCIBE-CERT** encaja mejor como punto de apoyo ante el incidente. **CCN-CERT** nos sirve como segundo ejemplo de equipo de respuesta español y para explicar cómo se organiza la respuesta en el ámbito público.
+
+La ayuda técnica de un CERT/CSIRT es distinta de la obligación legal de notificar una brecha de datos personales a la autoridad de protección de datos.
 
 ## 5.5. Conclusión
 
