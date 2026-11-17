@@ -23,6 +23,14 @@ Para proteger la información debemos cumplir tres principios:
 - **Integridad:** los datos no deben modificarse sin permiso.
 - **Disponibilidad:** los sistemas y archivos deben estar accesibles cuando se necesiten.
 
+### Cómo afecta cada amenaza a la empresa
+
+El phishing es el punto de entrada del caso: el atacante se hace pasar por Recursos Humanos para que alguien confíe en el mensaje. Tras ejecutar el adjunto, el malware podría intentar robar contraseñas, conectarse a otros equipos o consultar archivos internos. Por eso debemos proteger tanto el correo como los ordenadores y las carpetas compartidas.
+
+No todas las amenazas se han confirmado. En concreto, el ransomware y la fuga de datos son riesgos que tendremos en cuenta, no hechos demostrados.
+
+**Ejemplo:** si una cuenta infectada tiene acceso a todos los documentos de clientes, el daño potencial será mayor que si solo puede consultar los archivos de su departamento.
+
 ## 1.2. Normas de seguridad para los trabajadores
 
 Para evitar futuros ataques, la empresa establecerá las siguientes normas:
@@ -40,6 +48,14 @@ Para evitar futuros ataques, la empresa establecerá las siguientes normas:
 
 Estas medidas ayudan a reducir los riesgos y limitar las consecuencias de un ataque.
 
+### Cómo aplicaremos estas normas
+
+La empresa comunicará las normas por escrito y las explicará durante la formación. Informática revisará que los equipos tengan las actualizaciones y la protección activadas; los responsables de departamento revisarán quién necesita acceso a cada carpeta.
+
+**Ejemplo:** un empleado que recibe una supuesta nómina de Recursos Humanos no debería abrirla directamente. Primero comprobará la dirección del remitente y, si tiene dudas, preguntará a Recursos Humanos por otro canal conocido.
+
+Las copias de seguridad deberán probarse periódicamente: no basta con crearlas si después no pueden recuperarse.
+
 ## 1.3. Plan de formación y concienciación
 
 El objetivo es enseñar a los 100 empleados a reconocer amenazas y actuar correctamente.
@@ -53,6 +69,12 @@ El objetivo es enseñar a los 100 empleados a reconocer amenazas y actuar correc
 | Evaluación | Cuestionarios para comprobar lo aprendido. |
 
 También se realizarán simulaciones de correos fraudulentos, sin archivos peligrosos, para comprobar si los trabajadores identifican los ataques.
+
+### Cómo comprobaremos si la formación funciona
+
+Al comenzar se realizará un cuestionario breve para saber qué conocimientos tienen los trabajadores. Después de la sesión se repetirá la evaluación y se corregirán las preguntas más falladas. Una simulación segura de phishing permitirá practicar cómo identificar y comunicar correos sospechosos.
+
+El objetivo no será castigar a quien se equivoque, sino detectar qué temas necesitan más explicación. Se registrará el número de trabajadores formados y los resultados globales, sin utilizar contraseñas reales ni adjuntos peligrosos.
 
 ## 1.4. Cartel sobre phishing y guía de buenas prácticas
 
@@ -78,6 +100,12 @@ También se realizarán simulaciones de correos fraudulentos, sin archivos pelig
 
 El cartel y la guía se distribuirán entre los empleados para mejorar la seguridad de la empresa.
 
+### Cómo se utilizarán los materiales
+
+El cartel se colocará cerca de los puestos de trabajo y se compartirá por los canales internos. La guía se entregará al incorporarse a la empresa y permanecerá disponible para consultas rápidas.
+
+El mensaje principal será sencillo: **si un correo parece extraño, no abras el archivo y avisa a informática**. Avisar pronto permite investigar antes de que se extienda el problema.
+
 ## 1.5. Criptografía y seguridad
 
 La criptografía permite proteger la información y realizar comunicaciones seguras.
@@ -93,6 +121,16 @@ La criptografía permite proteger la información y realizar comunicaciones segu
 | **Diffie-Hellman** | Permite acordar una clave secreta compartida sin enviarla directamente. | ECDHE |
 
 **Aplicación a nuestra empresa:** utilizaremos cifrado para proteger la información, certificados para verificar conexiones y funciones hash para comprobar que las evidencias de la investigación no han sido modificadas.
+
+### Ejemplos de uso en nuestro incidente
+
+- **AES:** puede proteger el contenido de un disco o archivo de la empresa si el dispositivo se pierde o lo roba alguien.
+- **RSA y certificados:** ayudan a verificar identidades y realizar operaciones criptográficas en servicios seguros.
+- **SHA-256:** permitirá obtener una huella del archivo investigado y comprobar si la copia conservada sigue siendo igual.
+- **Firma digital y PKI:** permiten verificar documentos firmados dentro de un sistema de certificados confiable.
+- **Diffie-Hellman:** puede ayudar a establecer claves para una conexión cifrada; por sí solo no autentica a la otra persona.
+
+Es importante distinguir entre **cifrar** (ocultar contenido), **hacer un hash** (obtener una huella) y **firmar digitalmente** (ayudar a comprobar origen e integridad). No son la misma función.
 
 ## 1.6. Conclusión
 
