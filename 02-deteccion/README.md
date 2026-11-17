@@ -21,6 +21,12 @@ Después se detectaron conexiones sospechosas, alertas del antivirus e intentos 
 
 La gravedad definitiva dependerá de los resultados de la investigación.
 
+### Por qué la gravedad inicial es alta
+
+El problema no se limita a un correo extraño: el archivo llegó a ejecutarse y después aparecieron alertas y conexiones sospechosas. Además, hay indicios de intentos de acceso a archivos compartidos y una posible exposición de datos personales.
+
+La prioridad es averiguar si el malware sigue activo, si otras cuentas han sido utilizadas y si hubo extracción real de información. La clasificación se actualizará cuando tengamos evidencias.
+
 ## 2.2. Sistemas y servicios afectados
 
 Los principales sistemas que podrían estar afectados son:
@@ -32,6 +38,12 @@ Los principales sistemas que podrían estar afectados son:
 - **Base de datos:** posible exposición de información de clientes.
 
 Todavía debemos investigar qué sistemas están realmente comprometidos.
+
+### Orden de revisión de los sistemas
+
+Primero analizaremos el ordenador del empleado que abrió el adjunto. Después comprobaremos su cuenta de correo, las conexiones que realizó y si se intentó acceder al servidor de archivos.
+
+También revisaremos otros equipos relacionados con las mismas alertas. La base de datos de clientes será prioritaria por el posible impacto sobre la información personal, pero **no afirmaremos que esté afectada sin pruebas**.
 
 ## 2.3. Herramientas de detección y monitorización
 
@@ -48,6 +60,14 @@ Utilizaremos diferentes herramientas para investigar el incidente.
 
 También existen sistemas SIEM, IDS, IPS y EDR que permiten detectar y supervisar amenazas en una empresa.
 
+### Para qué sirve cada tipo de herramienta
+
+**Defender** puede mostrar detecciones o archivos puestos en cuarentena. **PowerShell** nos permite consultar información del propio equipo. **Wireshark** ayuda a observar paquetes de red capturados de forma autorizada.
+
+En una empresa grande podrían usarse herramientas más completas: un **SIEM** reúne registros de varios sistemas, un **IDS** alerta sobre actividad sospechosa, un **IPS** puede bloquearla y un **EDR** ayuda a investigar y responder desde los equipos.
+
+Para nuestro laboratorio comenzaremos con las herramientas de Windows que ya hemos estudiado, antes de añadir programas más complejos.
+
 ## 2.4. Registros que debemos consultar
 
 Para saber qué ha ocurrido, revisaremos los siguientes registros:
@@ -61,6 +81,12 @@ Para saber qué ha ocurrido, revisaremos los siguientes registros:
 | Correo | Remitente, destinatarios, enlaces y archivos adjuntos. |
 
 Estos registros nos ayudarán a reconstruir el incidente y conocer qué actividad se ha producido.
+
+### Qué preguntas responderemos con los registros
+
+Queremos saber **qué ocurrió, cuándo ocurrió y desde qué equipo**. Compararemos la hora del correo con la ejecución del archivo, las alertas del antivirus y las conexiones detectadas.
+
+Un registro aislado no demuestra necesariamente un ataque. Por ejemplo, conectarse a una IP externa es normal en muchos programas. Será sospechoso si coincide con otros indicios, como un proceso desconocido o una detección del antivirus.
 
 ## 2.5. Investigación mediante OSINT
 
@@ -76,6 +102,12 @@ En nuestro incidente investigaremos las direcciones IP y los dominios sospechoso
 - **AbuseIPDB:** consultar reportes de actividad sospechosa asociados a direcciones IP.
 
 Los resultados de estas páginas son indicios y deben comprobarse con otras evidencias.
+
+### Procedimiento de consulta
+
+Cuando encontremos una IP o un dominio de interés, anotaremos el indicador y consultaremos distintas fuentes públicas. Revisaremos si existen reportes anteriores y guardaremos fecha, enlace y resultado.
+
+**Precaución:** no subiremos documentos privados ni archivos internos a servicios públicos de análisis. Tampoco consideraremos una IP maliciosa únicamente porque aparezca reportada una vez; los resultados deben contrastarse.
 
 ## 2.6. Ficha de registro del incidente
 
@@ -94,6 +126,12 @@ Para documentar correctamente el incidente, crearemos una ficha con la informaci
 | Estado | Pendiente de investigación y confirmación |
 
 La fecha, las direcciones IP y las evidencias obtenidas se añadirán cuando realicemos las pruebas prácticas.
+
+### Cómo actualizaremos la ficha
+
+A medida que investiguemos añadiremos la fecha de detección, responsables, equipos analizados, indicadores encontrados, decisiones adoptadas y evidencias asociadas.
+
+Se distinguirá entre **hechos observados** (por ejemplo, una alerta registrada), **indicios** (una conexión potencialmente sospechosa) y **datos sin confirmar** (una posible fuga). Esto ayudará a justificar las decisiones del siguiente apartado.
 
 ## 2.7. Conclusión
 
