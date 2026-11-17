@@ -20,6 +20,12 @@ Para ello, recopilaremos las siguientes evidencias:
 
 Utilizaremos principalmente **PowerShell y el Visor de eventos de Windows** para obtener información.
 
+### Prioridad de recogida
+
+Empezaremos por la información que puede desaparecer rápidamente, como procesos y conexiones activas, siempre que se pueda recopilar sin alterar innecesariamente el equipo. Después guardaremos registros, mensajes, archivos y copias de interés.
+
+Cada evidencia tendrá un nombre claro, como `EV-01-correo` o `EV-02-registros`, y explicaremos de qué equipo procede. Las pruebas reales se recogerán en una máquina virtual autorizada, sin ejecutar malware.
+
 ## 3.2. Preservación de las evidencias
 
 Es importante conservar las pruebas sin modificarlas para que puedan utilizarse durante la investigación.
@@ -31,6 +37,12 @@ Para ello seguiremos estas medidas:
 3. Evitar modificar los archivos originales.
 4. Calcular el hash SHA-256 para comprobar su integridad.
 5. Permitir el acceso únicamente a las personas autorizadas.
+
+### Cómo evitaremos alterar las pruebas
+
+Trabajaremos sobre copias cuando sea posible, conservando el original protegido. Anotaremos las herramientas utilizadas y los comandos ejecutados. No abriremos un adjunto peligroso haciendo doble clic para «ver qué pasa».
+
+Cuando tomemos una captura, indicaremos qué demuestra y a qué evidencia corresponde. Además, calcularemos un hash de los archivos guardados para detectar modificaciones posteriores.
 
 ## 3.3. Investigación del correo y archivo malicioso
 
@@ -45,6 +57,12 @@ Investigaremos:
 - **Antivirus:** consultar si detectó alguna amenaza.
 
 El archivo se analizará de forma segura, sin ejecutar malware real en nuestros equipos.
+
+### Qué intentaremos descubrir
+
+Comprobaremos si el nombre visible del remitente coincide con su dirección real y si el mensaje contiene peticiones extrañas. También estudiaremos la extensión del archivo, sus propiedades y las alertas asociadas a él.
+
+**Ejemplo:** que el mensaje diga «Recursos Humanos» no demuestra que sea auténtico. La dirección real del remitente, las cabeceras y el contexto nos ayudarán a valorarlo. Los enlaces y adjuntos se estudiarán sin acceder a recursos peligrosos desde un equipo de trabajo.
 
 ## 3.4. Análisis de conexiones sospechosas
 
@@ -61,6 +79,12 @@ Comprobaremos:
 - Posibles conexiones con servidores maliciosos.
 
 También podremos utilizar VirusTotal o AbuseIPDB para consultar información pública sobre las IP sospechosas.
+
+### Relación entre procesos y conexiones
+
+No basta con encontrar una dirección IP: también debemos identificar qué proceso se comunicó con ella y si la conexión corresponde a un servicio legítimo.
+
+Intentaremos construir una pequeña línea temporal con la hora del correo, la ejecución del adjunto, la primera alerta y las conexiones posteriores. Así podremos comprobar si los hechos están relacionados o son coincidencias.
 
 ## 3.5. Cadena de custodia
 
@@ -80,6 +104,12 @@ Para documentarla utilizaremos una tabla:
 
 De esta forma podremos demostrar que las pruebas se han conservado correctamente.
 
+### Ejemplo de registro de movimientos
+
+Si el responsable recoge un registro y entrega una copia al técnico que lo analizará, anotaremos **quién lo recogió, a quién se entregó, a qué hora, por qué motivo y dónde quedó almacenado**.
+
+La cadena de custodia no es solo una tabla: es un historial continuo de la evidencia desde que se obtiene hasta que se archiva. Así podremos explicar qué se hizo con cada archivo.
+
 ## 3.6. Cálculo del hash SHA-256
 
 El **SHA-256** es una función hash que genera una huella digital de un archivo.
@@ -97,6 +127,14 @@ El comando mostrará el hash SHA-256 del archivo seleccionado.
 Volveremos a calcularlo posteriormente. Si ambos resultados coinciden, podremos comprobar que el contenido no ha cambiado.
 
 El resultado real y su captura se añadirán cuando realicemos la práctica.
+
+### Qué debe aparecer en la captura de la práctica
+
+Para que el resultado sea comprensible, guardaremos una captura donde se vea el comando ejecutado, el nombre del archivo y el valor SHA-256. Después calcularemos de nuevo su hash y compararemos ambos resultados.
+
+Si los hashes coinciden, es un indicio fuerte de que el contenido permanece igual. Sin embargo, el hash por sí solo no demuestra quién creó el archivo ni si es seguro.
+
+El comando anterior es un **ejemplo**: la ruta se cambiará por la ubicación real del archivo de prueba cuando hagamos la práctica.
 
 ## 3.7. Conclusión
 
