@@ -199,4 +199,4 @@ Las siguientes pruebas se realizaron en máquinas de laboratorio. Las capturas d
 
 ## Revisión para la entrega
 
-Las cuatro capturas y los materiales de concienciación están disponibles en este repositorio. Queda incorporar todo al PDF final y reunir las fuentes de los apuntes del profesor en la bibliografía general.
+Las cuatro capturas, el cartel y la guía de concienciación están disponibles en este repositorio. Las fuentes del profesor se pueden citar directamente en esta sección.
