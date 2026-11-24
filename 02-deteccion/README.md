@@ -1,6 +1,6 @@
 # 2. DETECCIÓN Y AUDITORÍA
 
-**Estado:** teoría resumida aprobada; prácticas, evidencias y fuentes pendientes.
+**Estado:** teoría desarrollada, cinco evidencias prácticas documentadas y ejercicio OSINT del incidente completado.
 
 ## 2.1. Clasificación del incidente y gravedad
 
@@ -125,7 +125,7 @@ Para documentar correctamente el incidente, crearemos una ficha con la informaci
 | Posible consecuencia | Exposición de datos de clientes |
 | Estado | Pendiente de investigación y confirmación |
 
-La fecha, las direcciones IP y las evidencias obtenidas se añadirán cuando realicemos las pruebas prácticas.
+La fecha real de detección del incidente ficticio y las IP sospechosas no están especificadas en el enunciado. No se inventan. Las pruebas del laboratorio se documentan más abajo, separadas del caso empresarial.
 
 ### Cómo actualizaremos la ficha
 
@@ -133,7 +133,40 @@ A medida que investiguemos añadiremos la fecha de detección, responsables, equ
 
 Se distinguirá entre **hechos observados** (por ejemplo, una alerta registrada), **indicios** (una conexión potencialmente sospechosa) y **datos sin confirmar** (una posible fuga). Esto ayudará a justificar las decisiones del siguiente apartado.
 
-## 2.7. Conclusión
+## 2.7. Ejemplo de investigación OSINT y relación con el incidente
+
+En la práctica de Shodan consultamos la IP pública `1.1.1.1`. Esta es una dirección conocida de Cloudflare y **no es un indicador de ataque** de Daniel Company. La captura [P2_03_Shodan.png](../evidencias/P2_03_Shodan.png) demuestra que conocemos la herramienta, pero no sirve para confirmar el origen de una infección.
+
+### Ejemplo guiado con indicadores ficticios
+
+Para representar cómo investigaríamos los indicadores de un correo sospechoso podemos utilizar estas direcciones **reservadas para documentación**:
+
+| Indicador ficticio | Qué revisaríamos | Precaución |
+|---|---|---|
+| IP `203.0.113.10` | Si aparece en registros de conexión, a qué hora, desde qué proceso y con qué puerto. | Es una IP de ejemplo, no un servidor malicioso real. |
+| Dominio `nominas-verificacion.example` | Si el correo lo menciona, qué dirección mostraría el enlace y si existe una suplantación del remitente. | `.example` es un dominio reservado para ejemplos; no representa una campaña real. |
+
+**Procedimiento que seguiríamos con indicadores reales obtenidos de registros autorizados:**
+
+1. Registrar la IP o el dominio, la fecha, la fuente y el equipo donde apareció.
+2. Relacionar la IP con el proceso local y la hora de la conexión.
+3. Consultar fuentes públicas (por ejemplo, Shodan, RDAP, VirusTotal o AbuseIPDB) sin subir documentos privados.
+4. Comparar los resultados de OSINT con el antivirus, los eventos y las conexiones internas.
+5. Clasificar el indicador como confirmado, sospechoso o no concluyente, explicando por qué.
+
+**Resultado del ejercicio:** hemos practicado la consulta pública y descrito el método de comprobación. No tenemos una IP o un dominio malicioso extraído del caso real que permita atribuir el ataque. Por ello **no afirmamos que exista una conexión del laboratorio con la IP de ejemplo**.
+
+### Cómo se conectan las capturas de detección con el análisis
+
+| Captura | Qué demuestra realmente | Qué comprobaríamos en una investigación |
+|---|---|---|
+| [P2_01](../evidencias/P2_01_EventosWindows.png) | Consulta de eventos de Windows. | Correlación con la hora de ejecución y las alertas. |
+| [P2_02](../evidencias/P2_02_Conexiones.png) | Listado de conexiones TCP observadas. | Destino externo, proceso asociado y actividad anómala. |
+| [P2_03](../evidencias/P2_03_Shodan.png) | Consulta OSINT de una IP pública de demostración. | Reputación e información pública de un indicador realmente detectado. |
+| [P2_04](../evidencias/P2_04_AngryIPScanner.png) | Descubrimiento de equipos activos en una red de laboratorio autorizada. | Identificar equipos que requieren revisión. |
+| [P2_05](../evidencias/P2_05_WaybackMachine.png) | Consulta histórica de una web. | Comparar cambios de páginas, si fuera relevante para el incidente. |
+
+## 2.8. Conclusión
 
 La detección y la auditoría permiten identificar actividades sospechosas y conocer el alcance de un incidente.
 
@@ -198,7 +231,8 @@ Las siguientes pruebas se realizaron en máquinas de laboratorio. Las capturas d
 *Evidencia: [P2_05_WaybackMachine.png](../evidencias/P2_05_WaybackMachine.png)*.
 
 
-## Pendiente para la entrega definitiva
+## Revisión para la entrega
 
-- Verificar y completar las fuentes de los apuntes del profesor.
-- Revisar el alcance de cada prueba frente al enunciado.
+Las cinco capturas ya están incorporadas. Queda pendiente únicamente reunirlas en el PDF final y completar la bibliografía general con los materiales del profesor.
+
+**Referencias de herramientas:** [Microsoft Learn — Get-NetTCPConnection](https://learn.microsoft.com/en-us/powershell/module/nettcpip/get-nettcpconnection), [Shodan](https://www.shodan.io/), [IANA — dominios reservados](https://www.iana.org/domains/reserved).
