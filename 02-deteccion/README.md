@@ -4,7 +4,7 @@
 
 ## 2.1. Clasificación del incidente y gravedad
 
-La empresa TecnoGestión S. L. ha sufrido un ataque de phishing. Un trabajador abrió un archivo malicioso recibido por correo electrónico.
+La empresa Daniel Company ha sufrido un ataque de phishing. Un trabajador abrió un archivo malicioso recibido por correo electrónico.
 
 Después se detectaron conexiones sospechosas, alertas del antivirus e intentos de acceso a carpetas compartidas.
 
@@ -116,7 +116,7 @@ Para documentar correctamente el incidente, crearemos una ficha con la informaci
 | Campo | Información |
 |---|---|
 | Identificador | INC-2026-001 |
-| Empresa | TecnoGestión S. L. |
+| Empresa | Daniel Company |
 | Tipo de ataque | Phishing con ejecución de malware |
 | Gravedad inicial | Alta (provisional) |
 | Origen aparente | Correo falso de Recursos Humanos |
@@ -137,7 +137,7 @@ Se distinguirá entre **hechos observados** (por ejemplo, una alerta registrada)
 
 La detección y la auditoría permiten identificar actividades sospechosas y conocer el alcance de un incidente.
 
-En TecnoGestión S. L. utilizaremos el antivirus, los registros de Windows, PowerShell y herramientas de análisis de red para investigar lo ocurrido.
+En Daniel Company utilizaremos el antivirus, los registros de Windows, PowerShell y herramientas de análisis de red para investigar lo ocurrido.
 
 Toda la información obtenida servirá para continuar con el apartado 3: Investigación y análisis.
 
