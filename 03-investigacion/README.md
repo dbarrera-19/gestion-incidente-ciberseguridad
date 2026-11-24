@@ -218,7 +218,7 @@ Las siguientes pruebas se realizaron en máquinas de laboratorio. Las capturas d
 Las siete capturas y el guion de correo simulado ya están incorporados. No se ha obtenido una muestra auténtica de malware ni se han confirmado conexiones maliciosas.
 
 
-## 3.8. Ejemplo práctico: análisis de un correo de phishing simulado
+## 3.7. Ejemplo práctico: análisis de un correo de phishing simulado
 
 **Tipo de actividad:** simulación académica. El correo, las direcciones y el adjunto son ficticios. No se envió ningún mensaje real ni se ejecutó malware.
 
@@ -261,7 +261,7 @@ Las siete capturas y el guion de correo simulado ya están incorporados. No se h
 
 **Evidencia:** la tabla y el análisis forman parte del propio informe. No es necesaria una captura de pantalla de este correo ficticio. Si posteriormente se analiza un correo de laboratorio real y seguro, podrá añadirse una captura de esa práctica, identificada como tal.
 
-## 3.9. Procedimiento para analizar el adjunto mencionado en el correo
+## 3.8. Procedimiento para analizar el adjunto mencionado en el correo
 
 En el ejemplo anterior el archivo se llama `Actualizacion_Nomina.docm`. **Este archivo no existe en el laboratorio:** únicamente aparece nombrado en el mensaje ficticio. Por eso no podemos mostrar un hash suyo, una alerta real ni un resultado de antivirus.
 
@@ -283,7 +283,7 @@ Si un correo sospechoso llegase realmente a Daniel Company, seguiríamos este pr
 
 **Conclusión:** el caso explica qué habría que investigar, y las capturas demuestran técnicas aplicables. No muestran el análisis de un archivo malicioso real.
 
-## 3.10. Línea temporal del incidente
+## 3.9. Línea temporal del incidente
 
 Como el enunciado **no proporciona horas exactas**, la siguiente cronología usa el orden de los hechos y no inventa fechas:
 
@@ -299,7 +299,7 @@ Como el enunciado **no proporciona horas exactas**, la siguiente cronología usa
 
 Para construir una línea temporal forense real habría que incorporar marcas de tiempo verificadas del correo, el archivo, el antivirus, los eventos de Windows y el tráfico de red.
 
-## 3.11. Relación entre evidencia, análisis y respuesta
+## 3.10. Relación entre evidencia, análisis y respuesta
 
 | Evidencia o actividad | Interpretación correcta | Siguiente actuación propuesta |
 |---|---|---|
@@ -314,19 +314,10 @@ Para construir una línea temporal forense real habría que incorporar marcas de
 
 **Fuente de consulta para el hash:** [Microsoft Learn — Get-FileHash](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-filehash).
 
-## 3.12. Conclusión
 
-La investigación permite conocer cómo comenzó el ataque, qué equipos pueden estar afectados y qué actividad sospechosa se ha producido.
+## 3.11. Prácticas adicionales de investigación
 
-Mediante PowerShell, los registros de Windows y el análisis de evidencias podremos investigar el incidente de Daniel Company
-
-También utilizaremos hashes SHA-256 y una cadena de custodia para proteger las pruebas obtenidas.
-
-La cronología y el análisis del adjunto son documentales; las capturas realizadas corresponden a un laboratorio autorizado. Todavía no existen evidencias de exfiltración de datos en la empresa ficticia.
-
-## 3.13. Prácticas adicionales de investigación
-
-### 3.13.1. Análisis de un paquete TCP con Wireshark
+### 3.11.1. Análisis de un paquete TCP con Wireshark
 
 **Objetivo:** localizar los puertos y las direcciones IP de una conexión para practicar el análisis de red.
 
@@ -348,7 +339,7 @@ La captura muestra también otros paquetes TLS. **No hay evidencia de que la IP 
 
 ![Detalle del protocolo TCP en Wireshark](../evidencias/P3_08_AnalisisTrafico.png)
 
-### 3.13.2. Creación y examen de un archivo ficticio
+### 3.11.2. Creación y examen de un archivo ficticio
 
 **Objetivo:** aprender a identificar las propiedades básicas de un archivo que podría investigarse como adjunto de correo, **sin crear ni ejecutar malware**.
 
@@ -366,7 +357,7 @@ Get-Item "C:\Evidencias\Phishing\Nomina_Simulada.txt" | Select-Object Name,Lengt
 
 ![Propiedades del archivo simulado](../evidencias/P3_09_ArchivoSimulado.png)
 
-### 3.13.3. Verificación del hash SHA-256 del archivo de prueba
+### 3.11.3. Verificación del hash SHA-256 del archivo de prueba
 
 **Objetivo:** comprobar que el contenido de un archivo no cambia entre dos lecturas.
 
@@ -383,7 +374,7 @@ Write-Host "Coinciden: $($hashInicial -eq $hashFinal)"
 
 ![Comparación de hashes SHA-256](../evidencias/P3_10_HashAdjunto.png)
 
-### 3.13.4. Inspección de permisos NTFS en una carpeta de prueba
+### 3.11.4. Inspección de permisos NTFS en una carpeta de prueba
 
 **Objetivo:** revisar quién puede acceder a una carpeta que representa documentos empresariales.
 
@@ -403,3 +394,13 @@ La carpeta creada es local y **no se ha demostrado que esté compartida por red*
 **Relación con el incidente:** el caso menciona intentos de acceso a carpetas compartidas. Esta práctica demuestra cómo inspeccionar permisos; una auditoría real también tendría que comprobar el acceso SMB y los registros de inicio de sesión.
 
 Las cuatro imágenes adicionales se han subido a `evidencias/` y se enlazan en este apartado.
+
+## 3.12. Conclusión
+
+La investigación permite conocer cómo comenzó el ataque, qué equipos pueden estar afectados y qué actividad sospechosa se ha producido.
+
+Mediante PowerShell, los registros de Windows y el análisis de evidencias podremos investigar el incidente de Daniel Company.
+
+También utilizaremos hashes SHA-256 y una cadena de custodia para proteger las pruebas obtenidas.
+
+La cronología y el análisis del adjunto son documentales; las capturas realizadas corresponden a un laboratorio autorizado. Todavía no existen evidencias de exfiltración de datos en la empresa ficticia.
