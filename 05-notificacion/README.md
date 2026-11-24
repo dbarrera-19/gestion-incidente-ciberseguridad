@@ -1,6 +1,6 @@
 # 5. NOTIFICACIÓN Y ORGANISMOS DE RESPUESTA
 
-**Estado:** teoría y simulación documental completadas. Las notificaciones son modelos académicos; no se ha producido una comunicación real.
+**Estado:** teoría, evaluación simulada y modelos de comunicación documentados. No se ha enviado ninguna notificación real.
 
 ## 5.1. Comunicación interna del incidente
 
