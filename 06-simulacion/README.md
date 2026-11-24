@@ -4,7 +4,7 @@
 
 ## 6.1. Descripción de la simulación
 
-Se realizará una reunión simulada del equipo de ciberseguridad de TecnoGestión S. L. para decidir cómo actuar ante el ataque.
+Se realizará una reunión simulada del equipo de ciberseguridad de Daniel Company para decidir cómo actuar ante el ataque.
 
 El objetivo es demostrar cómo investigar, contener y recuperar los sistemas afectados.
 
@@ -44,7 +44,7 @@ Durante la simulación aparecen cuatro problemas que requieren tomar decisiones.
 
 ## 6.3. Acta de la reunión
 
-**Empresa:** TecnoGestión S. L.
+**Empresa:** Daniel Company
 
 **Incidente:** INC-2026-001
 
@@ -78,7 +78,7 @@ Este cuadro representa **decisiones previstas para la simulación**, no actuacio
 
 La simulación permite practicar la toma de decisiones durante un incidente de ciberseguridad.
 
-En TecnoGestión S. L. hemos planteado cómo actuar ante nuevos equipos infectados, posibles fugas de datos y accesos persistentes del atacante.
+En Daniel Company hemos planteado cómo actuar ante nuevos equipos infectados, posibles fugas de datos y accesos persistentes del atacante.
 
 La prioridad será detener el ataque, proteger las evidencias y recuperar los servicios sin comprometer nuevamente la seguridad.
 
