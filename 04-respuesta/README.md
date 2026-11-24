@@ -197,7 +197,7 @@ Write-Host "Restauración correcta: $($hashBackup -eq $hashRestaurado)"
 
 **Resultado observado:** `Restauración correcta: True`. Los hashes del archivo copiado y restaurado coincidieron, lo que demuestra la integridad de esa restauración de prueba.
 
-**Captura:** `P4_04_VerificacionRecuperacion.png` (pendiente de subir).
+**Captura:** `P4_04_VerificacionRecuperacion.png`.
 
 ![Restauración correcta comprobada con hash](../evidencias/P4_04_VerificacionRecuperacion.png)
 
