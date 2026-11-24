@@ -1,6 +1,6 @@
 # 2. DETECCIÓN Y AUDITORÍA
 
-**Estado:** teoría desarrollada, cinco evidencias prácticas documentadas y ejercicio OSINT del incidente completado.
+**Estado:** teoría desarrollada, cinco evidencias prácticas documentadas y ejercicio OSINT de demostración documentado.
 
 ## 2.1. Clasificación del incidente y gravedad
 
@@ -133,7 +133,7 @@ A medida que investiguemos añadiremos la fecha de detección, responsables, equ
 
 Se distinguirá entre **hechos observados** (por ejemplo, una alerta registrada), **indicios** (una conexión potencialmente sospechosa) y **datos sin confirmar** (una posible fuga). Esto ayudará a justificar las decisiones del siguiente apartado.
 
-## 2.7. Ejemplo de investigación OSINT y relación con el incidente
+## 2.7. Ejemplo de investigación OSINT aplicado al caso ficticio
 
 En la práctica de Shodan consultamos la IP pública `1.1.1.1`. Esta es una dirección conocida de Cloudflare y **no es un indicador de ataque** de Daniel Company. La captura [P2_03_Shodan.png](../evidencias/P2_03_Shodan.png) demuestra que conocemos la herramienta, pero no sirve para confirmar el origen de una infección.
 
