@@ -166,13 +166,6 @@ Para representar cómo investigaríamos los indicadores de un correo sospechoso 
 | [P2_04](../evidencias/P2_04_AngryIPScanner.png) | Descubrimiento de equipos activos en una red de laboratorio autorizada. | Identificar equipos que requieren revisión. |
 | [P2_05](../evidencias/P2_05_WaybackMachine.png) | Consulta histórica de una web. | Comparar cambios de páginas, si fuera relevante para el incidente. |
 
-## 2.8. Conclusión
-
-La detección y la auditoría permiten identificar actividades sospechosas y conocer el alcance de un incidente.
-
-En Daniel Company utilizaremos el antivirus, los registros de Windows, PowerShell y herramientas de análisis de red para investigar lo ocurrido.
-
-Toda la información obtenida servirá para continuar con el apartado 3: Investigación y análisis.
 
 ---
 
@@ -237,7 +230,7 @@ Las cinco capturas ya están incorporadas. Las referencias y los materiales del 
 
 **Referencias de herramientas:** [Microsoft Learn — Get-NetTCPConnection](https://learn.microsoft.com/en-us/powershell/module/nettcpip/get-nettcpconnection), [Shodan](https://www.shodan.io/), [IANA — dominios reservados](https://www.iana.org/domains/reserved).
 
-## 2.9. Práctica adicional: captura de tráfico con Wireshark
+## 2.8. Práctica adicional: captura de tráfico con Wireshark
 
 **Objetivo:** observar tráfico de red generado en una máquina virtual Windows para distinguir protocolos, direcciones IP y posibles anomalías. Se utilizó Wireshark sobre la interfaz `Ethernet 2`.
 
@@ -255,3 +248,11 @@ Las cinco capturas ya están incorporadas. Las referencias y los materiales del 
 ![Captura general de Wireshark](../evidencias/P2_06_Wireshark.png)
 
 **Relación con el caso:** en un incidente real compararíamos las conexiones observadas con la hora de la alerta, el proceso responsable, las IP de destino y otros registros. Esta captura es exclusivamente de laboratorio.
+
+## 2.10. Conclusión
+
+La detección y la auditoría permiten identificar actividades sospechosas y conocer el alcance de un incidente.
+
+En Daniel Company utilizaremos el antivirus, los registros de Windows, PowerShell y herramientas de análisis de red para investigar lo ocurrido.
+
+Toda la información obtenida servirá para continuar con el apartado 3: Investigación y análisis.
