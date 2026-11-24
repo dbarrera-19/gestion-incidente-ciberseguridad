@@ -164,4 +164,4 @@ Las siguientes pruebas se realizaron en máquinas de laboratorio. Las capturas d
 
 ## Revisión para la entrega
 
-Las tres capturas ya están incorporadas. Las medidas de erradicación y revocación de credenciales se explican como procedimiento propuesto, no como actuaciones realizadas. Falta integrar este apartado en el PDF final y completar la bibliografía general.
+Las tres capturas ya están incorporadas. Las medidas de erradicación y revocación de credenciales se explican como procedimiento propuesto, no como actuaciones realizadas.
