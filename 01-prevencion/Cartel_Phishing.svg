@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1420" width="1000" height="1420">
+<rect width="1000" height="1420" fill="#f5f8fc"/>
+<rect width="1000" height="260" fill="#12365a"/>
+<text x="65" y="85" fill="#b6d7eb" font-size="30" font-family="Arial,sans-serif" font-weight="bold">TECNOGESTIÓN S. L.  ·  SEGURIDAD</text>
+<text x="65" y="161" fill="white" font-size="66" font-family="Arial,sans-serif" font-weight="bold">¡CUIDADO CON</text>
+<text x="65" y="231" fill="white" font-size="74" font-family="Arial,sans-serif" font-weight="bold">EL PHISHING!</text>
+<rect x="65" y="305" width="870" height="145" rx="20" fill="#e3f0f8"/>
+<text x="94" y="352" font-family="Arial,sans-serif" font-size="32" font-weight="bold" fill="#12365a">¿QUÉ ES?</text>
+<text x="94" y="394" font-family="Arial,sans-serif" font-size="26" fill="#243a4d">Un correo falso que suplanta a alguien de confianza</text>
+<text x="94" y="429" font-family="Arial,sans-serif" font-size="26" fill="#243a4d">para robar datos o conseguir que abras malware.</text>
+<text x="65" y="515" font-family="Arial,sans-serif" font-size="40" fill="#12365a" font-weight="bold">SEÑALES DE ALERTA</text>
+<g font-family="Arial,sans-serif" font-size="29" fill="#182d42">
+<rect x="65" y="552" width="870" height="91" rx="16" fill="white"/><circle cx="111" cy="597" r="18" fill="#db463e"/><text x="149" y="607">Remitente desconocido o dirección extraña.</text>
+<rect x="65" y="659" width="870" height="91" rx="16" fill="white"/><circle cx="111" cy="705" r="18" fill="#db463e"/><text x="149" y="715">Mensajes con urgencia, presión o amenazas.</text>
+<rect x="65" y="766" width="870" height="91" rx="16" fill="white"/><circle cx="111" cy="811" r="18" fill="#db463e"/><text x="149" y="821">Enlaces o adjuntos que no esperabas recibir.</text>
+<rect x="65" y="873" width="870" height="91" rx="16" fill="white"/><circle cx="111" cy="918" r="18" fill="#db463e"/><text x="149" y="928">Peticiones de contraseñas o datos personales.</text>
+</g>
+<text x="65" y="1036" font-family="Arial,sans-serif" font-size="40" fill="#12365a" font-weight="bold">¿QUÉ DEBES HACER?</text>
+<g font-family="Arial,sans-serif" font-size="28" fill="#182d42">
+<text x="82" y="1091">1. No abras enlaces ni archivos sospechosos.</text>
+<text x="82" y="1145">2. Verifica el remitente por otro canal.</text>
+<text x="82" y="1199">3. No compartas claves ni códigos MFA.</text>
+<text x="82" y="1253">4. Comunícalo inmediatamente a informática.</text>
+</g>
+<rect x="0" y="1320" width="1000" height="100" fill="#c43b39"/>
+<text x="48" y="1381" font-family="Arial,sans-serif" font-size="31" fill="white" font-weight="bold">Ante la duda: NO ABRAS EL ARCHIVO. AVISA.</text>
+</svg>
