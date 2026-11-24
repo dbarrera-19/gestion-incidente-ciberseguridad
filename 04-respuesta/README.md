@@ -115,13 +115,6 @@ En este caso, **anticipación** significa preparar normas y copias antes del ata
 
 Al cerrar el incidente documentaremos las medidas que funcionaron y las que deben corregirse.
 
-## 4.7. Conclusión
-
-La respuesta y recuperación permiten detener el ataque, eliminar las amenazas y recuperar el funcionamiento de la empresa.
-
-En Daniel Company aplicaremos medidas de aislamiento, bloqueo de conexiones, protección de credenciales y restauración de sistemas.
-
-Además, utilizaremos los principios de ciberresiliencia para reducir las consecuencias de futuros incidentes.
 
 ---
 
@@ -166,7 +159,7 @@ Las siguientes pruebas se realizaron en máquinas de laboratorio. Las capturas d
 
 Las tres capturas ya están incorporadas. Las medidas de erradicación y revocación de credenciales se explican como procedimiento propuesto, no como actuaciones realizadas.
 
-## 4.8. Práctica adicional: restauración verificada mediante SHA-256
+## 4.7. Práctica adicional: restauración verificada mediante SHA-256
 
 **Objetivo:** demostrar que se puede recuperar un archivo desde una copia y comprobar que la restauración conserva su contenido.
 
@@ -202,3 +195,11 @@ Write-Host "Restauración correcta: $($hashBackup -eq $hashRestaurado)"
 ![Restauración correcta comprobada con hash](../evidencias/P4_04_VerificacionRecuperacion.png)
 
 **Relación con el incidente:** tras contener y eliminar una amenaza, la empresa debe restaurar copias verificadas. Este ejercicio únicamente demuestra la recuperación de **un archivo inocuo**, no la restauración completa de un sistema infectado.
+
+## 4.9. Conclusión
+
+La respuesta y recuperación permiten detener el ataque, eliminar las amenazas y recuperar el funcionamiento de la empresa.
+
+En Daniel Company aplicaremos medidas de aislamiento, bloqueo de conexiones, protección de credenciales y restauración de sistemas.
+
+Además, utilizaremos los principios de ciberresiliencia para reducir las consecuencias de futuros incidentes.
