@@ -233,6 +233,6 @@ Las siguientes pruebas se realizaron en máquinas de laboratorio. Las capturas d
 
 ## Revisión para la entrega
 
-Las cinco capturas ya están incorporadas. Queda pendiente únicamente reunirlas en el PDF final y completar la bibliografía general con los materiales del profesor.
+Las cinco capturas ya están incorporadas. Las referencias y los materiales del profesor deben mantenerse en la documentación de GitHub.
 
 **Referencias de herramientas:** [Microsoft Learn — Get-NetTCPConnection](https://learn.microsoft.com/en-us/powershell/module/nettcpip/get-nettcpconnection), [Shodan](https://www.shodan.io/), [IANA — dominios reservados](https://www.iana.org/domains/reserved).
