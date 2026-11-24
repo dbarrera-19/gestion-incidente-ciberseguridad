@@ -1,6 +1,6 @@
 # 3. INVESTIGACIÓN Y ANÁLISIS
 
-**Estado:** teoría resumida aprobada. Prácticas, evidencias y fuentes pendientes.
+**Estado:** teoría, siete capturas y análisis documental del correo completados; sin análisis de malware real.
 
 ## 3.1. Recopilación de evidencias
 
@@ -126,11 +126,11 @@ El comando mostrará el hash SHA-256 del archivo seleccionado.
 
 Volveremos a calcularlo posteriormente. Si ambos resultados coinciden, podremos comprobar que el contenido no ha cambiado.
 
-El resultado real y su captura se añadirán cuando realicemos la práctica.
+El laboratorio ya cuenta con capturas del cálculo de hashes: [P1_03_SHA256.png](../evidencias/P1_03_SHA256.png) y [P3_02_HashEvidencias.png](../evidencias/P3_02_HashEvidencias.png). No representan el hash del adjunto ficticio del correo.
 
-### Qué debe aparecer en la captura de la práctica
+### Qué muestran nuestras capturas de la práctica
 
-Para que el resultado sea comprensible, guardaremos una captura donde se vea el comando ejecutado, el nombre del archivo y el valor SHA-256. Después calcularemos de nuevo su hash y compararemos ambos resultados.
+En las capturas del laboratorio se ve el cálculo de SHA-256 de archivos de prueba y de los CSV recopilados. Una comprobación de integridad posterior requeriría volver a calcular y comparar los valores; no afirmamos que ya se haya realizado esa segunda comparación.
 
 Si los hashes coinciden, es un indicio fuerte de que el contenido permanece igual. Sin embargo, el hash por sí solo no demuestra quién creó el archivo ni si es seguro.
 
@@ -146,7 +146,7 @@ También utilizaremos hashes SHA-256 y una cadena de custodia para proteger las 
 
 ---
 
-**Prácticas pendientes:** recopilación de evidencias con PowerShell, análisis de registros, cálculo de SHA-256 y documentación de la cadena de custodia.
+**Prácticas realizadas:** recopilación de registros, hashes SHA-256 y registro inicial de cadena de custodia en laboratorio. La cadena de custodia completa de una investigación real seguiría necesitando registrar todas las transferencias.
 
 ## Evidencias prácticas realizadas en el laboratorio
 
@@ -223,10 +223,9 @@ Las siguientes pruebas se realizaron en máquinas de laboratorio. Las capturas d
 *Evidencia: [P3_07_ScriptForenseISE.png](../evidencias/P3_07_ScriptForenseISE.png)*.
 
 
-## Pendiente para la entrega definitiva
+## Revisión para la entrega
 
-- Verificar y completar las fuentes de los apuntes del profesor.
-- Revisar el alcance de cada prueba frente al enunciado.
+Las siete capturas y el guion de correo simulado ya están incorporados. No se ha obtenido una muestra auténtica de malware ni se han confirmado conexiones maliciosas. Queda integrar este apartado en el PDF final y completar la bibliografía.
 
 
 ## 3.8. Ejemplo práctico: análisis de un correo de phishing simulado
@@ -271,3 +270,56 @@ Las siguientes pruebas se realizaron en máquinas de laboratorio. Las capturas d
 **Conclusión:** el ejemplo reúne varias señales típicas de phishing y reproduce el método de engaño descrito en el incidente INC-2026-001. Es un ejercicio de **identificación de indicadores**, no una prueba de que un correo malicioso haya llegado realmente a la empresa.
 
 **Evidencia:** la tabla y el análisis forman parte del propio informe. No es necesaria una captura de pantalla de este correo ficticio. Si posteriormente se analiza un correo de laboratorio real y seguro, podrá añadirse una captura de esa práctica, identificada como tal.
+
+## 3.9. Procedimiento para analizar el adjunto mencionado en el correo
+
+En el ejemplo anterior el archivo se llama `Actualizacion_Nomina.docm`. **Este archivo no existe en el laboratorio:** únicamente aparece nombrado en el mensaje ficticio. Por eso no podemos mostrar un hash suyo, una alerta real ni un resultado de antivirus.
+
+Si un correo sospechoso llegase realmente a Daniel Company, seguiríamos este procedimiento seguro:
+
+1. **Conservar el correo original:** registrar quién lo recibió, la fecha, el remitente, el asunto y, cuando sea posible, sus cabeceras completas.
+2. **Preservar el adjunto sin ejecutarlo:** obtener una copia en un entorno autorizado y restringido, sin abrirlo para habilitar contenido ni macros.
+3. **Registrar nombre, tamaño y tipo real:** comprobar si el archivo es realmente un documento de Word y si su formato permite macros. El nombre y la extensión pueden ser engañosos.
+4. **Calcular SHA-256:** usar `Get-FileHash` sobre la muestra guardada y anotar el valor obtenido. Esto permite identificar esa copia y comprobar su integridad.
+5. **Consultar las alertas locales:** buscar detecciones de antivirus relacionadas con ese archivo y contrastar fecha, equipo y usuario.
+6. **Analizar de forma controlada:** si fuera necesario examinar macros o comportamiento, lo haría personal autorizado con herramientas de análisis estático o un entorno aislado. No se ejecutaría en el ordenador habitual.
+7. **Documentar el resultado:** anotar evidencias, hipótesis y limitaciones antes de decidir si el archivo es malicioso.
+
+### Relación con nuestras prácticas
+
+- [P1_03_SHA256.png](../evidencias/P1_03_SHA256.png) enseña a obtener la huella de un archivo **de prueba**.
+- [P3_01_Recopilacion.png](../evidencias/P3_01_Recopilacion.png) muestra la recopilación de procesos, conexiones y eventos.
+- [P3_02_HashEvidencias.png](../evidencias/P3_02_HashEvidencias.png) documenta los hashes de los CSV generados.
+
+**Conclusión:** el caso explica qué habría que investigar, y las capturas demuestran técnicas aplicables. No muestran el análisis de un archivo malicioso real.
+
+## 3.10. Línea temporal del incidente
+
+Como el enunciado **no proporciona horas exactas**, la siguiente cronología usa el orden de los hechos y no inventa fechas:
+
+| Orden | Hecho descrito en el caso | Estado |
+|---|---|---|
+| 1 | Varios empleados reciben un correo que parece proceder de Recursos Humanos. | Dato del escenario. |
+| 2 | Un trabajador abre el adjunto y ejecuta un archivo malicioso. | Dato del escenario. |
+| 3 | Informática observa conexiones externas sospechosas y alertas del antivirus. | Dato del escenario. |
+| 4 | Se detectan intentos de acceder a carpetas compartidas. | Dato del escenario. |
+| 5 | Surge la sospecha de que puedan haberse extraído datos de clientes. | **Hipótesis no confirmada**. |
+| 6 | Se plantea recopilar registros, analizar equipos y contener el acceso. | Medidas propuestas para la investigación. |
+| 7 | Se practican la recogida de registros, los hashes y la contención en máquinas de laboratorio independientes. | Pruebas realizadas; **no son registros del ataque ficticio**. |
+
+Para construir una línea temporal forense real habría que incorporar marcas de tiempo verificadas del correo, el archivo, el antivirus, los eventos de Windows y el tráfico de red.
+
+## 3.11. Relación entre evidencia, análisis y respuesta
+
+| Evidencia o actividad | Interpretación correcta | Siguiente actuación propuesta |
+|---|---|---|
+| Conexiones de laboratorio [P2_02](../evidencias/P2_02_Conexiones.png) | Permiten practicar la consulta de conexiones, no demostrar comunicación con un atacante. | En el caso real, identificar proceso, IP externa y hora; después contrastar con alertas. |
+| Registros exportados [P3_01](../evidencias/P3_01_Recopilacion.png) | Acreditan que sabemos guardar información para su análisis. | Preservar originales y contrastar indicios. |
+| Hashes [P3_02](../evidencias/P3_02_HashEvidencias.png) | Permiten identificar archivos y detectar cambios posteriores. | Recalcular los hashes al transferir o examinar copias. |
+| Registro inicial [P3_03](../evidencias/P3_03_CadenaCustodia.png) | Es un comienzo de documentación, no una cadena de custodia completa. | Registrar entregas, responsables, fechas, motivos y almacenamiento. |
+| Aislamiento [P4_01](../evidencias/P4_01_Aislamiento.png) | Demuestra cómo deshabilitar interfaces de red de la VM. | Aplicarlo a un equipo sospechoso cuando proceda y comprobar su aislamiento. |
+| Bloqueo [P4_02](../evidencias/P4_02_BloqueoFirewall.png) | Demuestra la creación de una regla para una IP reservada de ejemplo. | Bloquear solo indicadores reales y verificados, preservando las evidencias. |
+
+**Resultado general:** se ha mostrado el procedimiento para pasar de una alerta a la recogida de pruebas y a la contención, pero no se ha demostrado una infección ni una filtración real.
+
+**Fuente de consulta para el hash:** [Microsoft Learn — Get-FileHash](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-filehash).
