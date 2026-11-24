@@ -21,7 +21,6 @@ Aprender a prevenir, detectar, investigar, contener y documentar un incidente de
 ## Material de trabajo
 - [Scripts y comandos](scripts/README.md)
 - [Evidencias y capturas](evidencias/README.md)
-- [Informe final](informe/README.md)
 
 ## Estado del proyecto
 - [x] Estructura inicial del repositorio.
@@ -29,7 +28,6 @@ Aprender a prevenir, detectar, investigar, contener y documentar un incidente de
 - [x] Prácticas en máquinas virtuales Windows y Linux.
 - [x] 19 capturas del laboratorio incorporadas y enlazadas.
 - [x] Cartel y guía de prevención, ejemplo de correo simulado, evaluación de notificación y acta de reunión simulada.
-- [ ] Informe técnico final en PDF.
 
 ## Alcance y límites de las pruebas
 
