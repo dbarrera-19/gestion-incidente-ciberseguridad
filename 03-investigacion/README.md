@@ -213,11 +213,6 @@ Las siguientes pruebas se realizaron en máquinas de laboratorio. Las capturas d
 *Evidencia: [P3_07_ScriptForenseISE.png](../evidencias/P3_07_ScriptForenseISE.png)*.
 
 
-## Revisión para la entrega
-
-Las siete capturas y el guion de correo simulado ya están incorporados. No se ha obtenido una muestra auténtica de malware ni se han confirmado conexiones maliciosas.
-
-
 ## 3.7. Ejemplo práctico: análisis de un correo de phishing simulado
 
 **Tipo de actividad:** simulación académica. El correo, las direcciones y el adjunto son ficticios. No se envió ningún mensaje real ni se ejecutó malware.
