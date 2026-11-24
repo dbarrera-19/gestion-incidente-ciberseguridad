@@ -241,7 +241,7 @@ Las siguientes pruebas se realizaron en máquinas de laboratorio. Las capturas d
 | Dirección del remitente | `rrhh@danielcompany-seguridad.example` |
 | Destinatario | `empleado@danielcompany.example` |
 | Asunto | URGENTE: Actualización de nómina |
-| Archivo adjunto mencionado | `Actualizacion_Nomina.docm` (no se ha creado ni adjuntado ningún archivo) |
+| Archivo adjunto mencionado | `Actualizacion_Nomina.docm` |
 
 > **Estimado empleado:**
 >
