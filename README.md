@@ -5,7 +5,7 @@
 ## Descripción
 Proyecto académico sobre la gestión de un incidente de ciberseguridad en una empresa ficticia de aproximadamente 100 empleados. Se estudia un correo que suplanta al departamento de Recursos Humanos y provoca la ejecución de un archivo sospechoso. Después aparecen alertas del antivirus, conexiones externas e intentos de acceso a carpetas compartidas; se investiga una **posible** fuga de datos.
 
-**Empresa ficticia propuesta:** Daniel Company (pendiente de confirmar en el informe).
+**Empresa ficticia del caso:** Daniel Company.
 
 ## Objetivo
 Aprender a prevenir, detectar, investigar, contener y documentar un incidente de seguridad mediante teoría, procedimientos y pruebas **seguras en un entorno autorizado**.
@@ -25,12 +25,13 @@ Aprender a prevenir, detectar, investigar, contener y documentar un incidente de
 
 ## Estado del proyecto
 - [x] Estructura inicial del repositorio.
-- [ ] Desarrollo de la teoría basada en los apuntes del profesor.
-- [ ] Preparación de un laboratorio con máquina virtual Windows.
-- [ ] Ejecución y documentación de pruebas.
+- [x] Documentación de los seis apartados redactada (pendiente de revisión final).
+- [x] Prácticas en máquinas virtuales Windows y Linux.
+- [x] 19 capturas del laboratorio incorporadas y enlazadas.
+- [x] Cartel y guía de prevención, ejemplo de correo simulado y evaluación de notificación.
 - [ ] Informe técnico final en PDF.
 
 ## Criterios de documentación
 Cada práctica deberá indicar **objetivo, entorno, herramienta, pasos, captura, resultado observado y explicación**. Los resultados de laboratorio se distinguirán siempre de los datos ficticios del caso. No se subirán contraseñas, datos personales reales ni archivos maliciosos.
 
-> Trabajo en elaboración. Todavía no se han realizado ni documentado pruebas prácticas.
+> Trabajo en elaboración. Las prácticas del laboratorio están documentadas; las comunicaciones y el incidente empresarial son simulados.
