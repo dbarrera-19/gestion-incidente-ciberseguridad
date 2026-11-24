@@ -215,7 +215,7 @@ Las siguientes pruebas se realizaron en máquinas de laboratorio. Las capturas d
 
 ## Revisión para la entrega
 
-Las siete capturas y el guion de correo simulado ya están incorporados. No se ha obtenido una muestra auténtica de malware ni se han confirmado conexiones maliciosas. Queda integrar este apartado en el PDF final y completar la bibliografía.
+Las siete capturas y el guion de correo simulado ya están incorporados. No se ha obtenido una muestra auténtica de malware ni se han confirmado conexiones maliciosas.
 
 
 ## 3.8. Ejemplo práctico: análisis de un correo de phishing simulado
