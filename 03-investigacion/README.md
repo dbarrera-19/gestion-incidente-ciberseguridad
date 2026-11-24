@@ -147,3 +147,83 @@ También utilizaremos hashes SHA-256 y una cadena de custodia para proteger las 
 ---
 
 **Prácticas pendientes:** recopilación de evidencias con PowerShell, análisis de registros, cálculo de SHA-256 y documentación de la cadena de custodia.
+
+## Evidencias prácticas realizadas en el laboratorio
+
+Las siguientes pruebas se realizaron en máquinas de laboratorio. Las capturas documentan los resultados observados; **no demuestran que se ejecutara malware real ni confirman una fuga de datos**.
+
+### Recopilación de registros
+
+**Herramienta o comando:** `PowerShell y Export-Csv`.
+
+**Resultado:** Se guardaron procesos.csv, conexiones.csv y eventos.csv a partir del equipo de laboratorio.
+
+![Recopilación de registros](../evidencias/P3_01_Recopilacion.png)
+
+*Evidencia: [P3_01_Recopilacion.png](../evidencias/P3_01_Recopilacion.png)*.
+
+### Hashes de las evidencias
+
+**Herramienta o comando:** `Get-FileHash -Algorithm SHA256`.
+
+**Resultado:** Se calcularon hashes SHA-256 de los tres CSV para comprobar posteriormente si cambian.
+
+![Hashes de las evidencias](../evidencias/P3_02_HashEvidencias.png)
+
+*Evidencia: [P3_02_HashEvidencias.png](../evidencias/P3_02_HashEvidencias.png)*.
+
+### Registro inicial de cadena de custodia
+
+**Herramienta o comando:** `Export-Csv e Import-Csv`.
+
+**Resultado:** Se generó un registro con archivo, fecha y responsable. No sustituye el historial completo de transferencias de evidencias.
+
+![Registro inicial de cadena de custodia](../evidencias/P3_03_CadenaCustodia.png)
+
+*Evidencia: [P3_03_CadenaCustodia.png](../evidencias/P3_03_CadenaCustodia.png)*.
+
+### Mensajes del kernel de Kali Linux
+
+**Herramienta o comando:** `sudo dmesg | tail -n 30`.
+
+**Resultado:** Se observaron mensajes de VirtualBox y avisos de VBoxClient, que no demuestran una infección.
+
+![Mensajes del kernel de Kali Linux](../evidencias/P3_04_EventosLinux.png)
+
+*Evidencia: [P3_04_EventosLinux.png](../evidencias/P3_04_EventosLinux.png)*.
+
+### Registro de paquetes en Linux
+
+**Herramienta o comando:** `cat /var/log/dpkg.log.1 | tail -n 25`.
+
+**Resultado:** Se consultaron entradas sobre paquetes como kali-menu, cloudflared y ca-certificates-java.
+
+![Registro de paquetes en Linux](../evidencias/P3_05_DpkgLinux.png)
+
+*Evidencia: [P3_05_DpkgLinux.png](../evidencias/P3_05_DpkgLinux.png)*.
+
+### Búsqueda de archivos en PowerShell ISE
+
+**Herramienta o comando:** `dir *txt`.
+
+**Resultado:** Se encontraron los archivos de prueba documento_original.txt, prueba.txt y secreto.txt.
+
+![Búsqueda de archivos en PowerShell ISE](../evidencias/P3_06_ListadoArchivos.png)
+
+*Evidencia: [P3_06_ListadoArchivos.png](../evidencias/P3_06_ListadoArchivos.png)*.
+
+### Automatización de recopilación en PowerShell ISE
+
+**Herramienta o comando:** `AnalisisForense.ps1`.
+
+**Resultado:** El script generó procesos.csv, conexiones.csv y eventos.csv; en la captura aparecen el código y los archivos producidos.
+
+![Automatización de recopilación en PowerShell ISE](../evidencias/P3_07_ScriptForenseISE.png)
+
+*Evidencia: [P3_07_ScriptForenseISE.png](../evidencias/P3_07_ScriptForenseISE.png)*.
+
+
+## Pendiente para la entrega definitiva
+
+- Verificar y completar las fuentes de los apuntes del profesor.
+- Revisar el alcance de cada prueba frente al enunciado.
