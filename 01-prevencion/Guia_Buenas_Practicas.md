@@ -1,4 +1,4 @@
-# Guía de buenas prácticas — TecnoGestión S. L.
+# Guía de buenas prácticas — Daniel Company
 
 **Destinatarios:** los 100 empleados de la empresa ficticia.
 
