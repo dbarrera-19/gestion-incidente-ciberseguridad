@@ -236,3 +236,22 @@ Las siguientes pruebas se realizaron en máquinas de laboratorio. Las capturas d
 Las cinco capturas ya están incorporadas. Las referencias y los materiales del profesor deben mantenerse en la documentación de GitHub.
 
 **Referencias de herramientas:** [Microsoft Learn — Get-NetTCPConnection](https://learn.microsoft.com/en-us/powershell/module/nettcpip/get-nettcpconnection), [Shodan](https://www.shodan.io/), [IANA — dominios reservados](https://www.iana.org/domains/reserved).
+
+## 2.9. Práctica adicional: captura de tráfico con Wireshark
+
+**Objetivo:** observar tráfico de red generado en una máquina virtual Windows para distinguir protocolos, direcciones IP y posibles anomalías. Se utilizó Wireshark sobre la interfaz `Ethernet 2`.
+
+**Procedimiento realizado:**
+
+1. Se seleccionó `Ethernet 2` en Wireshark.
+2. Se inició la captura durante una navegación web de prueba.
+3. Se detuvo la captura y se revisaron las columnas *Source*, *Destination*, *Protocol*, *Length* e *Info*.
+4. Se guardó localmente el archivo `Captura_Trafico_Laboratorio.pcapng`, que **no se sube** al repositorio para no publicar datos de las conexiones.
+
+**Resultado observado:** aparecen paquetes TCP, TLS, QUIC, mDNS y STP. La IP local `192.168.210.163` participa en varias comunicaciones; se observan retransmisiones TCP y cierres de sesión. **Una retransmisión no demuestra un ataque:** también puede aparecer por condiciones normales de la red.
+
+**Evidencia:** `P2_06_Wireshark.png` (captura enviada por el alumno, pendiente de cargar en `evidencias/`).
+
+![Captura general de Wireshark](../evidencias/P2_06_Wireshark.png)
+
+**Relación con el caso:** en un incidente real compararíamos las conexiones observadas con la hora de la alerta, el proceso responsable, las IP de destino y otros registros. Esta captura es exclusivamente de laboratorio.
