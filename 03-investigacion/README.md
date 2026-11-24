@@ -140,7 +140,7 @@ El comando anterior es un **ejemplo**: la ruta se cambiará por la ubicación re
 
 La investigación permite conocer cómo comenzó el ataque, qué equipos pueden estar afectados y qué actividad sospechosa se ha producido.
 
-Mediante PowerShell, los registros de Windows y el análisis de evidencias podremos investigar el incidente de TecnoGestión S. L.
+Mediante PowerShell, los registros de Windows y el análisis de evidencias podremos investigar el incidente de Daniel Company
 
 También utilizaremos hashes SHA-256 y una cadena de custodia para proteger las pruebas obtenidas.
 
