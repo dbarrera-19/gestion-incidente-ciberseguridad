@@ -250,7 +250,7 @@ Las cinco capturas ya están incorporadas. Las referencias y los materiales del 
 
 **Resultado observado:** aparecen paquetes TCP, TLS, QUIC, mDNS y STP. La IP local `192.168.210.163` participa en varias comunicaciones; se observan retransmisiones TCP y cierres de sesión. **Una retransmisión no demuestra un ataque:** también puede aparecer por condiciones normales de la red.
 
-**Evidencia:** `P2_06_Wireshark.png` (captura enviada por el alumno, pendiente de cargar en `evidencias/`).
+**Evidencia:** `P2_06_Wireshark.png` (captura del laboratorio subida a `evidencias/`).
 
 ![Captura general de Wireshark](../evidencias/P2_06_Wireshark.png)
 
