@@ -144,9 +144,9 @@ Estas medidas reducirán el riesgo de nuevos ataques y mejorarán la protección
 
 ## Material de concienciación elaborado
 
-**Cartel visual sobre phishing:** [Abrir cartel](Cartel_Phishing.svg)
+**Cartel visual sobre phishing:** [Abrir cartel](Cartel_Phishing_Daniel_Company.png)
 
-![Cartel de concienciación sobre phishing](Cartel_Phishing.svg)
+![Cartel de concienciación sobre phishing](Cartel_Phishing_Daniel_Company.png)
 
 **Guía para los empleados:** [Leer guía de buenas prácticas](Guia_Buenas_Practicas.md).
 
