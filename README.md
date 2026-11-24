@@ -26,7 +26,7 @@ Aprender a prevenir, detectar, investigar, contener y documentar un incidente de
 - [x] Estructura inicial del repositorio.
 - [x] Documentación de los seis apartados redactada y revisada.
 - [x] Prácticas en máquinas virtuales Windows y Linux.
-- [x] 19 capturas del laboratorio incorporadas y enlazadas.
+- [x] 25 capturas del laboratorio incorporadas y enlazadas.
 - [x] Cartel y guía de prevención, ejemplo de correo simulado, evaluación de notificación y acta de reunión simulada.
 
 ## Alcance y límites de las pruebas
