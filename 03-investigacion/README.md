@@ -344,7 +344,7 @@ La cronología y el análisis del adjunto son documentales; las capturas realiza
 
 La captura muestra también otros paquetes TLS. **No hay evidencia de que la IP externa sea maliciosa ni esté vinculada al phishing ficticio.**
 
-**Captura:** `P3_08_AnalisisTrafico.png` (pendiente de subir).
+**Captura:** `P3_08_AnalisisTrafico.png`.
 
 ![Detalle del protocolo TCP en Wireshark](../evidencias/P3_08_AnalisisTrafico.png)
 
@@ -362,7 +362,7 @@ Get-Item "C:\Evidencias\Phishing\Nomina_Simulada.txt" | Select-Object Name,Lengt
 
 **Resultado:** `Nomina_Simulada.txt`, extensión `.txt`, tamaño de 91 bytes y fecha de creación mostrada en la captura: 24/11/2026 a las 12:11:06 según el reloj de la máquina virtual. Es un archivo inocuo. **No es el supuesto `.docm` del correo ficticio**.
 
-**Captura:** `P3_09_ArchivoSimulado.png` (pendiente de subir).
+**Captura:** `P3_09_ArchivoSimulado.png`.
 
 ![Propiedades del archivo simulado](../evidencias/P3_09_ArchivoSimulado.png)
 
@@ -379,7 +379,7 @@ Write-Host "Coinciden: $($hashInicial -eq $hashFinal)"
 
 **Resultado observado:** se obtuvo dos veces el mismo SHA-256 y PowerShell mostró `Coinciden: True`. Esta comprobación confirma que no hubo cambios **entre ambas lecturas**, pero no demuestra que el archivo sea seguro ni sustituye una cadena de custodia completa.
 
-**Captura:** `P3_10_HashAdjunto.png` (pendiente de subir).
+**Captura:** `P3_10_HashAdjunto.png`.
 
 ![Comparación de hashes SHA-256](../evidencias/P3_10_HashAdjunto.png)
 
@@ -396,10 +396,10 @@ Get-Acl "C:\Evidencias\CarpetaCompartida" | Format-List Owner,AccessToString
 
 La carpeta creada es local y **no se ha demostrado que esté compartida por red**, ni se han modificado sus ACL.
 
-**Captura:** `P3_11_PermisosCarpeta.png` (pendiente de subir).
+**Captura:** `P3_11_PermisosCarpeta.png`.
 
 ![Lectura de permisos NTFS](../evidencias/P3_11_PermisosCarpeta.png)
 
 **Relación con el incidente:** el caso menciona intentos de acceso a carpetas compartidas. Esta práctica demuestra cómo inspeccionar permisos; una auditoría real también tendría que comprobar el acceso SMB y los registros de inicio de sesión.
 
-Las cuatro imágenes de este apartado se documentaron con capturas del laboratorio realizadas por el alumno; hasta que se suban los PNG con estos nombres a `evidencias/`, los enlaces anteriores no mostrarán las imágenes.
+Las cuatro imágenes adicionales se han subido a `evidencias/` y se enlazan en este apartado.
