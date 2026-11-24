@@ -323,3 +323,83 @@ Mediante PowerShell, los registros de Windows y el análisis de evidencias podre
 También utilizaremos hashes SHA-256 y una cadena de custodia para proteger las pruebas obtenidas.
 
 La cronología y el análisis del adjunto son documentales; las capturas realizadas corresponden a un laboratorio autorizado. Todavía no existen evidencias de exfiltración de datos en la empresa ficticia.
+
+## 3.13. Prácticas adicionales de investigación
+
+### 3.13.1. Análisis de un paquete TCP con Wireshark
+
+**Objetivo:** localizar los puertos y las direcciones IP de una conexión para practicar el análisis de red.
+
+**Procedimiento:** sobre la captura anterior se aplicó el filtro de visualización `tcp`; se seleccionó un paquete y se desplegó *Transmission Control Protocol*.
+
+**Resultados observados:**
+
+| Campo | Valor en el paquete seleccionado |
+|---|---|
+| Origen | `51.137.3.145` |
+| Destino | `192.168.210.163` |
+| Puerto origen | `443` |
+| Puerto destino | `63080` |
+| Indicadores TCP | `PSH, ACK` |
+
+La captura muestra también otros paquetes TLS. **No hay evidencia de que la IP externa sea maliciosa ni esté vinculada al phishing ficticio.**
+
+**Captura:** `P3_08_AnalisisTrafico.png` (pendiente de subir).
+
+![Detalle del protocolo TCP en Wireshark](../evidencias/P3_08_AnalisisTrafico.png)
+
+### 3.13.2. Creación y examen de un archivo ficticio
+
+**Objetivo:** aprender a identificar las propiedades básicas de un archivo que podría investigarse como adjunto de correo, **sin crear ni ejecutar malware**.
+
+En PowerShell se ejecutaron:
+
+```powershell
+New-Item -Path "C:\Evidencias\Phishing" -ItemType Directory -Force
+Set-Content -Path "C:\Evidencias\Phishing\Nomina_Simulada.txt" -Value "SIMULACION: archivo de prueba para investigar un correo de phishing. No contiene malware."
+Get-Item "C:\Evidencias\Phishing\Nomina_Simulada.txt" | Select-Object Name,Length,CreationTime,Extension
+```
+
+**Resultado:** `Nomina_Simulada.txt`, extensión `.txt`, tamaño de 91 bytes y fecha de creación mostrada en la captura: 24/11/2026 a las 12:11:06 según el reloj de la máquina virtual. Es un archivo inocuo. **No es el supuesto `.docm` del correo ficticio**.
+
+**Captura:** `P3_09_ArchivoSimulado.png` (pendiente de subir).
+
+![Propiedades del archivo simulado](../evidencias/P3_09_ArchivoSimulado.png)
+
+### 3.13.3. Verificación del hash SHA-256 del archivo de prueba
+
+**Objetivo:** comprobar que el contenido de un archivo no cambia entre dos lecturas.
+
+```powershell
+$archivo = "C:\Evidencias\Phishing\Nomina_Simulada.txt"
+$hashInicial = (Get-FileHash -Path $archivo -Algorithm SHA256).Hash
+$hashFinal = (Get-FileHash -Path $archivo -Algorithm SHA256).Hash
+Write-Host "Coinciden: $($hashInicial -eq $hashFinal)"
+```
+
+**Resultado observado:** se obtuvo dos veces el mismo SHA-256 y PowerShell mostró `Coinciden: True`. Esta comprobación confirma que no hubo cambios **entre ambas lecturas**, pero no demuestra que el archivo sea seguro ni sustituye una cadena de custodia completa.
+
+**Captura:** `P3_10_HashAdjunto.png` (pendiente de subir).
+
+![Comparación de hashes SHA-256](../evidencias/P3_10_HashAdjunto.png)
+
+### 3.13.4. Inspección de permisos NTFS en una carpeta de prueba
+
+**Objetivo:** revisar quién puede acceder a una carpeta que representa documentos empresariales.
+
+```powershell
+New-Item -Path "C:\Evidencias\CarpetaCompartida" -ItemType Directory -Force
+Get-Acl "C:\Evidencias\CarpetaCompartida" | Format-List Owner,AccessToString
+```
+
+**Resultado:** el propietario mostrado es `BUILTIN\Administradores`. Administradores y SYSTEM tienen control total, mientras que `BUILTIN\Usuarios` dispone de lectura/ejecución y determinados permisos para crear o añadir archivos. Estos permisos **deben revisarse** antes de almacenar información sensible.
+
+La carpeta creada es local y **no se ha demostrado que esté compartida por red**, ni se han modificado sus ACL.
+
+**Captura:** `P3_11_PermisosCarpeta.png` (pendiente de subir).
+
+![Lectura de permisos NTFS](../evidencias/P3_11_PermisosCarpeta.png)
+
+**Relación con el incidente:** el caso menciona intentos de acceso a carpetas compartidas. Esta práctica demuestra cómo inspeccionar permisos; una auditoría real también tendría que comprobar el acceso SMB y los registros de inicio de sesión.
+
+Las cuatro imágenes de este apartado se documentaron con capturas del laboratorio realizadas por el alumno; hasta que se suban los PNG con estos nombres a `evidencias/`, los enlaces anteriores no mostrarán las imágenes.
