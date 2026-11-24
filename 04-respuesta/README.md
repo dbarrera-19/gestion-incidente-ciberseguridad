@@ -1,6 +1,6 @@
 # 4. RESPUESTA Y RECUPERACIÓN
 
-**Estado:** teoría resumida aprobada; prácticas y evidencias pendientes.
+**Estado:** procedimiento desarrollado y tres evidencias prácticas de laboratorio documentadas.
 
 ## 4.1. Procedimiento de actuación
 
@@ -125,7 +125,7 @@ Además, utilizaremos los principios de ciberresiliencia para reducir las consec
 
 ---
 
-**Prácticas pendientes:** aislamiento de una máquina virtual, bloqueo de conexiones con el Firewall de Windows, comprobación de las reglas aplicadas y simulación de recuperación segura.
+**Prácticas realizadas en laboratorio:** aislamiento temporal de interfaces de red, creación y comprobación de una regla de firewall, y restauración de un archivo de prueba. No se ha documentado una eliminación real de malware ni una prueba de tráfico bloqueado.
 
 ## Evidencias prácticas realizadas en el laboratorio
 
@@ -162,7 +162,6 @@ Las siguientes pruebas se realizaron en máquinas de laboratorio. Las capturas d
 *Evidencia: [P4_03_Recuperacion.png](../evidencias/P4_03_Recuperacion.png)*.
 
 
-## Pendiente para la entrega definitiva
+## Revisión para la entrega
 
-- Verificar y completar las fuentes de los apuntes del profesor.
-- Revisar el alcance de cada prueba frente al enunciado.
+Las tres capturas ya están incorporadas. Las medidas de erradicación y revocación de credenciales se explican como procedimiento propuesto, no como actuaciones realizadas. Falta integrar este apartado en el PDF final y completar la bibliografía general.
