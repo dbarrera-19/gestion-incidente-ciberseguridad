@@ -5,7 +5,7 @@
 ## Descripción
 Proyecto académico sobre la gestión de un incidente de ciberseguridad en una empresa ficticia de aproximadamente 100 empleados. Se estudia un correo que suplanta al departamento de Recursos Humanos y provoca la ejecución de un archivo sospechoso. Después aparecen alertas del antivirus, conexiones externas e intentos de acceso a carpetas compartidas; se investiga una **posible** fuga de datos.
 
-**Empresa ficticia propuesta:** TecnoGestión S. L. (pendiente de confirmar en el informe).
+**Empresa ficticia propuesta:** Daniel Company (pendiente de confirmar en el informe).
 
 ## Objetivo
 Aprender a prevenir, detectar, investigar, contener y documentar un incidente de seguridad mediante teoría, procedimientos y pruebas **seguras en un entorno autorizado**.
