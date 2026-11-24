@@ -4,7 +4,7 @@
 
 ## 4.1. Procedimiento de actuación
 
-Una vez detectado el incidente en TecnoGestión S. L., debemos actuar rápidamente para detener el ataque y recuperar los sistemas afectados.
+Una vez detectado el incidente en Daniel Company, debemos actuar rápidamente para detener el ataque y recuperar los sistemas afectados.
 
 Seguiremos estas fases:
 
@@ -119,7 +119,7 @@ Al cerrar el incidente documentaremos las medidas que funcionaron y las que debe
 
 La respuesta y recuperación permiten detener el ataque, eliminar las amenazas y recuperar el funcionamiento de la empresa.
 
-En TecnoGestión S. L. aplicaremos medidas de aislamiento, bloqueo de conexiones, protección de credenciales y restauración de sistemas.
+En Daniel Company aplicaremos medidas de aislamiento, bloqueo de conexiones, protección de credenciales y restauración de sistemas.
 
 Además, utilizaremos los principios de ciberresiliencia para reducir las consecuencias de futuros incidentes.
 
