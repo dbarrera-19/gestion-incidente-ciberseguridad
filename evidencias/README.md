@@ -1,8 +1,6 @@
 # Evidencias prácticas del laboratorio
 
-Las 19 capturas finales se han **documentado y enlazado** desde los apartados 1, 2, 3 y 4 del repositorio.
-
-**Pendiente:** cargar los archivos PNG en esta carpeta para que las imágenes aparezcan dentro de los apartados.
+Las **19 capturas finales están subidas y verificadas** en esta carpeta, y están documentadas y enlazadas desde los apartados 1, 2, 3 y 4 del repositorio.
 
 ## Capturas por apartado
 
@@ -33,13 +31,14 @@ Las 19 capturas finales se han **documentado y enlazado** desde los apartados 1,
 - `P4_02_BloqueoFirewall.png`
 - `P4_03_Recuperacion.png`
 
-## Cómo cargar las capturas
+## Verificación de las capturas
 
-1. Descomprimir el paquete `Capturas_GitHub_Ciberseguridad.zip` preparado para la entrega.
-2. Abrir esta carpeta `evidencias` en GitHub y elegir **Add file → Upload files**.
-3. Seleccionar los **19 PNG que están dentro de la carpeta evidencias del ZIP** (no el ZIP entero).
-4. Confirmar la subida con **Commit changes**.
-5. Volver a los apartados 1 a 4 para comprobar que se muestran las imágenes.
+- [x] 4 capturas de prevención.
+- [x] 5 capturas de detección.
+- [x] 7 capturas de investigación.
+- [x] 3 capturas de respuesta.
+- [x] Archivos PNG disponibles en la carpeta `evidencias`.
+- [x] Imágenes referenciadas desde los README de los apartados 1 a 4.
 
 Las pruebas reales se hicieron sobre sistemas de laboratorio. No deben presentarse como pruebas de que el incidente ficticio ocurrió en un sistema real.
 
