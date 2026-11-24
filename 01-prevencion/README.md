@@ -142,8 +142,52 @@ Estas medidas reducirán el riesgo de nuevos ataques y mejorarán la protección
 
 ---
 
-## Pendiente de completar
+## Evidencias prácticas realizadas en el laboratorio
 
-- [ ] Diseñar e incorporar el cartel gráfico definitivo sobre phishing.
-- [ ] Contrastar referencias con los apuntes originales del profesor e incluir fuentes.
-- [ ] Realizar y documentar las prácticas en un laboratorio autorizado; no se han realizado todavía.
+Las siguientes pruebas se realizaron en máquinas de laboratorio. Las capturas documentan los resultados observados; **no demuestran que se ejecutara malware real ni confirman una fuga de datos**.
+
+### Antivirus de Windows
+
+**Herramienta o comando:** `Get-MpComputerStatus`.
+
+**Resultado:** El antivirus y la protección en tiempo real estaban activos (True). Las firmas mostraban fecha 30/10/2026 y conviene comprobar su actualización.
+
+![Antivirus de Windows](../evidencias/P1_01_Antivirus.png)
+
+*Evidencia: [P1_01_Antivirus.png](../evidencias/P1_01_Antivirus.png)*.
+
+### Estado del firewall
+
+**Herramienta o comando:** `Get-NetFirewallProfile`.
+
+**Resultado:** Los perfiles Domain, Private y Public aparecieron habilitados.
+
+![Estado del firewall](../evidencias/P1_02_Firewall.png)
+
+*Evidencia: [P1_02_Firewall.png](../evidencias/P1_02_Firewall.png)*.
+
+### Hash SHA-256 de un archivo
+
+**Herramienta o comando:** `Get-FileHash`.
+
+**Resultado:** Se obtuvo la huella SHA-256 de C:\Evidencias\prueba.txt para documentar su integridad inicial.
+
+![Hash SHA-256 de un archivo](../evidencias/P1_03_SHA256.png)
+
+*Evidencia: [P1_03_SHA256.png](../evidencias/P1_03_SHA256.png)*.
+
+### Demostración de cifrado AES
+
+**Herramienta o comando:** `PowerShell y .NET AES`.
+
+**Resultado:** Se creó el archivo secreto.cifrado de 48 bytes usando AES con clave de 256 bits. No se documentó el descifrado.
+
+![Demostración de cifrado AES](../evidencias/P1_04_Cifrado.png)
+
+*Evidencia: [P1_04_Cifrado.png](../evidencias/P1_04_Cifrado.png)*.
+
+
+## Pendiente para la entrega definitiva
+
+- Verificar y completar las fuentes de los apuntes del profesor.
+- Revisar el alcance de cada prueba frente al enunciado.
