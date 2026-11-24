@@ -134,17 +134,7 @@ En las capturas del laboratorio se ve el cálculo de SHA-256 de archivos de prue
 
 Si los hashes coinciden, es un indicio fuerte de que el contenido permanece igual. Sin embargo, el hash por sí solo no demuestra quién creó el archivo ni si es seguro.
 
-El comando anterior es un **ejemplo**: la ruta se cambiará por la ubicación real del archivo de prueba cuando hagamos la práctica.
-
-## 3.7. Conclusión
-
-La investigación permite conocer cómo comenzó el ataque, qué equipos pueden estar afectados y qué actividad sospechosa se ha producido.
-
-Mediante PowerShell, los registros de Windows y el análisis de evidencias podremos investigar el incidente de Daniel Company
-
-También utilizaremos hashes SHA-256 y una cadena de custodia para proteger las pruebas obtenidas.
-
----
+El comando anterior muestra una ruta de ejemplo; las capturas documentan los archivos de prueba con los que ya trabajamos.
 
 **Prácticas realizadas:** recopilación de registros, hashes SHA-256 y registro inicial de cadena de custodia en laboratorio. La cadena de custodia completa de una investigación real seguiría necesitando registrar todas las transferencias.
 
@@ -323,3 +313,13 @@ Para construir una línea temporal forense real habría que incorporar marcas de
 **Resultado general:** se ha mostrado el procedimiento para pasar de una alerta a la recogida de pruebas y a la contención, pero no se ha demostrado una infección ni una filtración real.
 
 **Fuente de consulta para el hash:** [Microsoft Learn — Get-FileHash](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-filehash).
+
+## 3.12. Conclusión
+
+La investigación permite conocer cómo comenzó el ataque, qué equipos pueden estar afectados y qué actividad sospechosa se ha producido.
+
+Mediante PowerShell, los registros de Windows y el análisis de evidencias podremos investigar el incidente de Daniel Company
+
+También utilizaremos hashes SHA-256 y una cadena de custodia para proteger las pruebas obtenidas.
+
+La cronología y el análisis del adjunto son documentales; las capturas realizadas corresponden a un laboratorio autorizado. Todavía no existen evidencias de exfiltración de datos en la empresa ficticia.
