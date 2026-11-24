@@ -196,7 +196,7 @@ Write-Host "Restauración correcta: $($hashBackup -eq $hashRestaurado)"
 
 **Relación con el incidente:** tras contener y eliminar una amenaza, la empresa debe restaurar copias verificadas. Este ejercicio únicamente demuestra la recuperación de **un archivo inocuo**, no la restauración completa de un sistema infectado.
 
-## 4.9. Conclusión
+## 4.8. Conclusión
 
 La respuesta y recuperación permiten detener el ataque, eliminar las amenazas y recuperar el funcionamiento de la empresa.
 
