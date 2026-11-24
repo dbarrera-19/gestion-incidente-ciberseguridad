@@ -4,7 +4,7 @@
 
 ## 6.1. Descripción de la simulación
 
-Se realizará una reunión simulada del equipo de ciberseguridad de Daniel Company para decidir cómo actuar ante el ataque.
+Se presenta una reunión simulada y escrita del equipo de ciberseguridad de Daniel Company para decidir cómo actuar ante el ataque.
 
 El objetivo es demostrar cómo investigar, contener y recuperar los sistemas afectados.
 
@@ -17,9 +17,9 @@ El objetivo es demostrar cómo investigar, contener y recuperar los sistemas afe
 
 ### Organización de la reunión
 
-El responsable de ciberseguridad abrirá la reunión explicando lo que sabemos con certeza: un empleado ejecutó un adjunto malicioso y existen alertas posteriores. Después pedirá al técnico el estado de los equipos y a la persona responsable de protección de datos la evaluación inicial de la posible fuga.
+En el guion, el responsable de ciberseguridad abre la reunión explicando lo que sabemos con certeza: un empleado ejecutó un adjunto malicioso y existen alertas posteriores. Después pide al técnico el estado de los equipos y a la persona responsable de protección de datos la evaluación inicial de la posible fuga.
 
-Cada participante explicará su propuesta y se anotarán las decisiones, el responsable asignado y la comprobación necesaria para darla por terminada.
+Cada participante explica su propuesta y se anotan las decisiones, el responsable asignado y la comprobación necesaria para darla por terminada.
 
 ## 6.2. Situaciones durante la reunión
 
@@ -60,7 +60,7 @@ Este diálogo es una **recreación académica** de cómo podría actuar el equip
 
 **Responsable de ciberseguridad:** «De acuerdo. Además, revisa las cuentas y sesiones que podrían estar comprometidas. Si detectamos accesos del atacante, revocaremos credenciales y bloquearemos las conexiones relacionadas».
 
-**Responsable de protección de datos:** «Mientras tanto, identificaré qué datos personales podían estar accesibles. Si confirmamos una brecha, valorararemos el riesgo para las personas y si tenemos que notificarla a la AEPD. No podemos esperar a terminar toda la investigación si ya conocemos una brecha notificable».
+**Responsable de protección de datos:** «Mientras tanto, identificaré qué datos personales podían estar accesibles. Si confirmamos una brecha, valoraremos el riesgo para las personas y si tenemos que notificarla a la AEPD. No podemos esperar a terminar toda la investigación si ya conocemos una brecha notificable».
 
 **Dirección:** «Entonces, ¿cuál es el plan que debemos seguir?».
 
