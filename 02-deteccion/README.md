@@ -143,11 +143,62 @@ Toda la información obtenida servirá para continuar con el apartado 3: Investi
 
 ---
 
-## Prácticas y fuentes pendientes
+## Evidencias prácticas realizadas en el laboratorio
 
-- [ ] Consultar eventos relevantes en el Visor de eventos de Windows y guardar capturas.
-- [ ] Revisar conexiones TCP con PowerShell mediante `Get-NetTCPConnection`.
-- [ ] Consultar indicadores seguros o de prueba mediante OSINT y documentar resultados.
-- [ ] Añadir fuentes de los apuntes originales del profesor y documentación de las herramientas.
+Las siguientes pruebas se realizaron en máquinas de laboratorio. Las capturas documentan los resultados observados; **no demuestran que se ejecutara malware real ni confirman una fuga de datos**.
 
-> No se han realizado todavía estas pruebas ni se han obtenido evidencias reales.
+### Registros de Windows
+
+**Herramienta o comando:** `Get-EventLog -LogName System -Newest 20`.
+
+**Resultado:** Se consultaron 20 eventos del sistema; se observaron eventos de servicios y errores de instalación. No prueban un ataque.
+
+![Registros de Windows](../evidencias/P2_01_EventosWindows.png)
+
+*Evidencia: [P2_01_EventosWindows.png](../evidencias/P2_01_EventosWindows.png)*.
+
+### Conexiones TCP del equipo
+
+**Herramienta o comando:** `Get-NetTCPConnection`.
+
+**Resultado:** Se mostraron conexiones establecidas con puertos y procesos; en la captura solo se aprecian direcciones locales y de enlace local.
+
+![Conexiones TCP del equipo](../evidencias/P2_02_Conexiones.png)
+
+*Evidencia: [P2_02_Conexiones.png](../evidencias/P2_02_Conexiones.png)*.
+
+### OSINT con Shodan
+
+**Herramienta o comando:** `Shodan: 1.1.1.1`.
+
+**Resultado:** Se consultaron puertos y metadatos públicos de una IP conocida, sin relación demostrada con el incidente ficticio.
+
+![OSINT con Shodan](../evidencias/P2_03_Shodan.png)
+
+*Evidencia: [P2_03_Shodan.png](../evidencias/P2_03_Shodan.png)*.
+
+### Descubrimiento de equipos
+
+**Herramienta o comando:** `Angry IP Scanner`.
+
+**Resultado:** En la red de laboratorio 10.10.10.1–10.10.10.30 se comprobaron 30 IP y se encontraron 3 activas: 10.10.10.1, 10.10.10.10 y 10.10.10.20.
+
+![Descubrimiento de equipos](../evidencias/P2_04_AngryIPScanner.png)
+
+*Evidencia: [P2_04_AngryIPScanner.png](../evidencias/P2_04_AngryIPScanner.png)*.
+
+### Consulta de una web archivada
+
+**Herramienta o comando:** `Wayback Machine`.
+
+**Resultado:** Se visualizó una copia histórica de incibe.es fechada el 17/02/2020. Es una práctica de búsqueda histórica.
+
+![Consulta de una web archivada](../evidencias/P2_05_WaybackMachine.png)
+
+*Evidencia: [P2_05_WaybackMachine.png](../evidencias/P2_05_WaybackMachine.png)*.
+
+
+## Pendiente para la entrega definitiva
+
+- Verificar y completar las fuentes de los apuntes del profesor.
+- Revisar el alcance de cada prueba frente al enunciado.
