@@ -155,10 +155,6 @@ Las siguientes pruebas se realizaron en máquinas de laboratorio. Las capturas d
 *Evidencia: [P4_03_Recuperacion.png](../evidencias/P4_03_Recuperacion.png)*.
 
 
-## Revisión para la entrega
-
-Las tres capturas ya están incorporadas. Las medidas de erradicación y revocación de credenciales se explican como procedimiento propuesto, no como actuaciones realizadas.
-
 ## 4.7. Práctica adicional: restauración verificada mediante SHA-256
 
 **Objetivo:** demostrar que se puede recuperar un archivo desde una copia y comprobar que la restauración conserva su contenido.
