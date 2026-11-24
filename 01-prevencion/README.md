@@ -1,6 +1,6 @@
 # 1. Prevención y concienciación
 
-**Estado:** teoría resumida aprobada. Cartel gráfico, fuentes originales y pruebas prácticas pendientes.
+**Estado:** teoría desarrollada, cartel y guía incorporados, y cuatro capturas prácticas documentadas.
 
 ## 1.1. Principales riesgos y amenazas
 
@@ -98,7 +98,7 @@ El objetivo no será castigar a quien se equivoque, sino detectar qué temas nec
 - Realizar copias de seguridad.
 - Informar de cualquier incidente.
 
-El cartel y la guía se distribuirán entre los empleados para mejorar la seguridad de la empresa.
+El cartel y la guía se proponen para su distribución entre los empleados; no afirmamos que esa formación se haya impartido realmente.
 
 ### Cómo se utilizarán los materiales
 
@@ -197,7 +197,6 @@ Las siguientes pruebas se realizaron en máquinas de laboratorio. Las capturas d
 *Evidencia: [P1_04_Cifrado.png](../evidencias/P1_04_Cifrado.png)*.
 
 
-## Pendiente para la entrega definitiva
+## Revisión para la entrega
 
-- Verificar y completar las fuentes de los apuntes del profesor.
-- Revisar el alcance de cada prueba frente al enunciado.
+Las cuatro capturas y los materiales de concienciación están disponibles en este repositorio. Queda incorporar todo al PDF final y reunir las fuentes de los apuntes del profesor en la bibliografía general.
