@@ -25,13 +25,17 @@ Aprender a prevenir, detectar, investigar, contener y documentar un incidente de
 
 ## Estado del proyecto
 - [x] Estructura inicial del repositorio.
-- [x] Documentación de los seis apartados redactada (pendiente de revisión final).
+- [x] Documentación de los seis apartados redactada y revisada.
 - [x] Prácticas en máquinas virtuales Windows y Linux.
 - [x] 19 capturas del laboratorio incorporadas y enlazadas.
-- [x] Cartel y guía de prevención, ejemplo de correo simulado y evaluación de notificación.
+- [x] Cartel y guía de prevención, ejemplo de correo simulado, evaluación de notificación y acta de reunión simulada.
 - [ ] Informe técnico final en PDF.
 
+## Alcance y límites de las pruebas
+
+El incidente de Daniel Company es un **caso ficticio**. Las pruebas de PowerShell, Windows, Kali Linux y OSINT se realizaron en laboratorios autorizados y no demuestran que el ataque ficticio ocurriera ni que hubiera filtración de datos. Las direcciones reservadas usadas como ejemplos no son indicadores maliciosos confirmados.
+
 ## Criterios de documentación
-Cada práctica deberá indicar **objetivo, entorno, herramienta, pasos, captura, resultado observado y explicación**. Los resultados de laboratorio se distinguirán siempre de los datos ficticios del caso. No se subirán contraseñas, datos personales reales ni archivos maliciosos.
+Cada práctica documentada presenta **herramienta, captura, resultado observado y explicación**. Las descripciones de los apartados explican el objetivo y el procedimiento; las capturas corresponden a la ejecución en laboratorio. Los resultados de laboratorio se distinguirán siempre de los datos ficticios del caso. No se subirán contraseñas, datos personales reales ni archivos maliciosos.
 
 > Trabajo en elaboración. Las prácticas del laboratorio están documentadas; las comunicaciones y el incidente empresarial son simulados.
