@@ -227,3 +227,47 @@ Las siguientes pruebas se realizaron en máquinas de laboratorio. Las capturas d
 
 - Verificar y completar las fuentes de los apuntes del profesor.
 - Revisar el alcance de cada prueba frente al enunciado.
+
+
+## 3.8. Ejemplo práctico: análisis de un correo de phishing simulado
+
+**Tipo de actividad:** simulación académica. El correo, las direcciones y el adjunto son ficticios. No se envió ningún mensaje real ni se ejecutó malware.
+
+### Correo recibido (ejemplo ficticio)
+
+| Campo | Contenido |
+|---|---|
+| Remitente visible | Recursos Humanos |
+| Dirección del remitente | `rrhh@danielcompany-seguridad.example` |
+| Destinatario | `empleado@danielcompany.example` |
+| Asunto | URGENTE: Actualización de nómina |
+| Archivo adjunto mencionado | `Actualizacion_Nomina.docm` (no se ha creado ni adjuntado ningún archivo) |
+
+> **Estimado empleado:**
+>
+> Por motivos de seguridad, debe revisar sus datos de nómina antes de 24 horas. Si no realiza la actualización, su cuenta podría quedar bloqueada.
+>
+> Abra el documento adjunto y siga las instrucciones.
+>
+> Departamento de Recursos Humanos
+
+### Señales de fraude que hemos identificado
+
+| Elemento | Motivo de sospecha |
+|---|---|
+| Remitente | La dirección no está verificada como una cuenta oficial de Recursos Humanos. |
+| Urgencia | Intenta que el trabajador actúe sin comprobar el mensaje. |
+| Amenaza | Advierte de un supuesto bloqueo de cuenta. |
+| Adjunto | La extensión `.docm` admite macros, que pueden utilizarse de forma maliciosa. La extensión por sí sola no demuestra una infección. |
+| Petición | Solicita abrir un archivo inesperado sin verificar su procedencia. |
+
+### Actuación correcta del empleado
+
+1. No abrir el adjunto ni pulsar enlaces.
+2. Comprobar la solicitud con Recursos Humanos mediante un canal conocido.
+3. Avisar al departamento de informática y conservar el mensaje para su análisis.
+4. Seguir las instrucciones del equipo de respuesta.
+
+**Conclusión:** el ejemplo reúne varias señales típicas de phishing y reproduce el método de engaño descrito en el incidente INC-2026-001. Es un ejercicio de **identificación de indicadores**, no una prueba de que un correo malicioso haya llegado realmente a la empresa.
+
+**Evidencia:** la tabla y el análisis forman parte del propio informe. No es necesaria una captura de pantalla de este correo ficticio. Si posteriormente se analiza un correo de laboratorio real y seguro, podrá añadirse una captura de esa práctica, identificada como tal.
