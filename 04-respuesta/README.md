@@ -126,3 +126,43 @@ Además, utilizaremos los principios de ciberresiliencia para reducir las consec
 ---
 
 **Prácticas pendientes:** aislamiento de una máquina virtual, bloqueo de conexiones con el Firewall de Windows, comprobación de las reglas aplicadas y simulación de recuperación segura.
+
+## Evidencias prácticas realizadas en el laboratorio
+
+Las siguientes pruebas se realizaron en máquinas de laboratorio. Las capturas documentan los resultados observados; **no demuestran que se ejecutara malware real ni confirman una fuga de datos**.
+
+### Aislamiento de la máquina virtual
+
+**Herramienta o comando:** `Disable-NetAdapter`.
+
+**Resultado:** Se deshabilitaron Ethernet y Ethernet 2 y se comprobó el estado Disabled. Se reactivaron para continuar el laboratorio.
+
+![Aislamiento de la máquina virtual](../evidencias/P4_01_Aislamiento.png)
+
+*Evidencia: [P4_01_Aislamiento.png](../evidencias/P4_01_Aislamiento.png)*.
+
+### Regla de bloqueo de IP
+
+**Herramienta o comando:** `New-NetFirewallRule`.
+
+**Resultado:** Se configuró una regla saliente activa para bloquear 203.0.113.10, una IP reservada para documentación. Se verificó la regla, no una conexión bloqueada real.
+
+![Regla de bloqueo de IP](../evidencias/P4_02_BloqueoFirewall.png)
+
+*Evidencia: [P4_02_BloqueoFirewall.png](../evidencias/P4_02_BloqueoFirewall.png)*.
+
+### Restauración de archivo desde una copia
+
+**Herramienta o comando:** `Copy-Item y Get-Content`.
+
+**Resultado:** Se restauró el documento de prueba y se comprobó su contenido. Es una simulación simple de recuperación.
+
+![Restauración de archivo desde una copia](../evidencias/P4_03_Recuperacion.png)
+
+*Evidencia: [P4_03_Recuperacion.png](../evidencias/P4_03_Recuperacion.png)*.
+
+
+## Pendiente para la entrega definitiva
+
+- Verificar y completar las fuentes de los apuntes del profesor.
+- Revisar el alcance de cada prueba frente al enunciado.
