@@ -37,7 +37,7 @@ Según el Reglamento General de Protección de Datos (RGPD):
 - Si existe un riesgo alto para las personas afectadas, también habrá que informarles sin demora injustificada.
 - Todas las brechas deberán quedar documentadas, aunque no sea obligatorio notificarlas.
 
-En TecnoGestión S. L. investigaremos si realmente se han visto comprometidos datos de clientes y evaluaremos la obligación de notificar el incidente.
+En Daniel Company investigaremos si realmente se han visto comprometidos datos de clientes y evaluaremos la obligación de notificar el incidente.
 
 ### Cómo valorar la posible brecha de datos
 
@@ -72,13 +72,13 @@ Es importante no enviar información personal innecesaria ni compartir muestras 
 | **INCIBE-CERT** | Ayuda a ciudadanos y entidades privadas a gestionar incidentes de ciberseguridad. |
 | **CCN-CERT** | Se especializa en la prevención y respuesta a incidentes del sector público español. |
 
-**INCIBE-CERT** sería el organismo de referencia para TecnoGestión S. L. al tratarse de una empresa privada.
+**INCIBE-CERT** sería el organismo de referencia para Daniel Company al tratarse de una empresa privada.
 
 El CCN-CERT es otro equipo nacional importante, aunque está orientado principalmente al sector público.
 
 ### Qué organismo encaja mejor con el caso
 
-TecnoGestión S. L. es una empresa privada, por lo que **INCIBE-CERT** encaja mejor como punto de apoyo ante el incidente. **CCN-CERT** nos sirve como segundo ejemplo de equipo de respuesta español y para explicar cómo se organiza la respuesta en el ámbito público.
+Daniel Company es una empresa privada, por lo que **INCIBE-CERT** encaja mejor como punto de apoyo ante el incidente. **CCN-CERT** nos sirve como segundo ejemplo de equipo de respuesta español y para explicar cómo se organiza la respuesta en el ámbito público.
 
 La ayuda técnica de un CERT/CSIRT es distinta de la obligación legal de notificar una brecha de datos personales a la autoridad de protección de datos.
 
@@ -86,7 +86,7 @@ La ayuda técnica de un CERT/CSIRT es distinta de la obligación legal de notifi
 
 La notificación permite informar correctamente sobre un incidente y solicitar ayuda especializada.
 
-En TecnoGestión S. L. comunicaremos el ataque internamente, estudiaremos si existe una brecha de datos personales y acudiremos a INCIBE-CERT cuando sea necesario.
+En Daniel Company comunicaremos el ataque internamente, estudiaremos si existe una brecha de datos personales y acudiremos a INCIBE-CERT cuando sea necesario.
 
 De esta manera, podremos gestionar mejor el incidente y cumplir las obligaciones correspondientes.
 
