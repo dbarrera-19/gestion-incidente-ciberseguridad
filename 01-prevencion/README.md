@@ -196,7 +196,3 @@ Las siguientes pruebas se realizaron en máquinas de laboratorio. Las capturas d
 
 *Evidencia: [P1_04_Cifrado.png](../evidencias/P1_04_Cifrado.png)*.
 
-
-## Revisión para la entrega
-
-Las cuatro capturas, el cartel y la guía de concienciación están disponibles en este repositorio. Las fuentes del profesor se pueden citar directamente en esta sección.
