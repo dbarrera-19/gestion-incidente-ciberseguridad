@@ -224,10 +224,6 @@ Las siguientes pruebas se realizaron en máquinas de laboratorio. Las capturas d
 *Evidencia: [P2_05_WaybackMachine.png](../evidencias/P2_05_WaybackMachine.png)*.
 
 
-## Revisión para la entrega
-
-Las cinco capturas ya están incorporadas. Las referencias y los materiales del profesor deben mantenerse en la documentación de GitHub.
-
 **Referencias de herramientas:** [Microsoft Learn — Get-NetTCPConnection](https://learn.microsoft.com/en-us/powershell/module/nettcpip/get-nettcpconnection), [Shodan](https://www.shodan.io/), [IANA — dominios reservados](https://www.iana.org/domains/reserved).
 
 ## 2.8. Práctica adicional: captura de tráfico con Wireshark
