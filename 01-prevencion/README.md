@@ -4,7 +4,7 @@
 
 ## 1.1. Principales riesgos y amenazas
 
-La empresa ficticia **TecnoGestión S. L.**, con 100 empleados, ha sufrido un ataque de phishing. Un trabajador abrió un archivo malicioso recibido por correo electrónico, provocando un incidente de seguridad.
+La empresa ficticia **Daniel Company**, con 100 empleados, ha sufrido un ataque de phishing. Un trabajador abrió un archivo malicioso recibido por correo electrónico, provocando un incidente de seguridad.
 
 Los principales riesgos son:
 
@@ -134,7 +134,7 @@ Es importante distinguir entre **cifrar** (ocultar contenido), **hacer un hash**
 
 ## 1.6. Conclusión
 
-El ataque sufrido por TecnoGestión S. L. demuestra la importancia de la prevención.
+El ataque sufrido por Daniel Company demuestra la importancia de la prevención.
 
 Para evitar incidentes similares, la empresa debe formar a sus empleados, establecer normas de seguridad, proteger los equipos y utilizar herramientas criptográficas.
 
@@ -150,7 +150,7 @@ Estas medidas reducirán el riesgo de nuevos ataques y mejorarán la protección
 
 **Guía para los empleados:** [Leer guía de buenas prácticas](Guia_Buenas_Practicas.md).
 
-Ambos materiales son documentos de formación propuestos para la empresa ficticia TecnoGestión S. L.; no representan una campaña ya impartida a los empleados.
+Ambos materiales son documentos de formación propuestos para la empresa ficticia Daniel Company; no representan una campaña ya impartida a los empleados.
 
 ## Evidencias prácticas realizadas en el laboratorio
 
