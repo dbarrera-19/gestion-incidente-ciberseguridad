@@ -142,6 +142,16 @@ Estas medidas reducirán el riesgo de nuevos ataques y mejorarán la protección
 
 ---
 
+## Material de concienciación elaborado
+
+**Cartel visual sobre phishing:** [Abrir cartel](Cartel_Phishing.svg)
+
+![Cartel de concienciación sobre phishing](Cartel_Phishing.svg)
+
+**Guía para los empleados:** [Leer guía de buenas prácticas](Guia_Buenas_Practicas.md).
+
+Ambos materiales son documentos de formación propuestos para la empresa ficticia TecnoGestión S. L.; no representan una campaña ya impartida a los empleados.
+
 ## Evidencias prácticas realizadas en el laboratorio
 
 Las siguientes pruebas se realizaron en máquinas de laboratorio. Las capturas documentan los resultados observados; **no demuestran que se ejecutara malware real ni confirman una fuga de datos**.
