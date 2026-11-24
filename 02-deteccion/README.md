@@ -249,7 +249,7 @@ Las cinco capturas ya están incorporadas. Las referencias y los materiales del 
 
 **Relación con el caso:** en un incidente real compararíamos las conexiones observadas con la hora de la alerta, el proceso responsable, las IP de destino y otros registros. Esta captura es exclusivamente de laboratorio.
 
-## 2.10. Conclusión
+## 2.9. Conclusión
 
 La detección y la auditoría permiten identificar actividades sospechosas y conocer el alcance de un incidente.
 
