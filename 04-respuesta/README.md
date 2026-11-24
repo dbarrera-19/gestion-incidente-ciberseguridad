@@ -165,3 +165,40 @@ Las siguientes pruebas se realizaron en máquinas de laboratorio. Las capturas d
 ## Revisión para la entrega
 
 Las tres capturas ya están incorporadas. Las medidas de erradicación y revocación de credenciales se explican como procedimiento propuesto, no como actuaciones realizadas.
+
+## 4.8. Práctica adicional: restauración verificada mediante SHA-256
+
+**Objetivo:** demostrar que se puede recuperar un archivo desde una copia y comprobar que la restauración conserva su contenido.
+
+**Entorno:** PowerShell de Windows, con un archivo de texto ficticio creado anteriormente. No se han utilizado datos reales de clientes.
+
+**Fase 1: crear y comprobar la copia.**
+
+```powershell
+New-Item -Path "C:\Evidencias\BackupPrueba" -ItemType Directory -Force
+Copy-Item "C:\Evidencias\Phishing\Nomina_Simulada.txt" "C:\Evidencias\BackupPrueba\Nomina_Simulada.txt"
+Get-FileHash "C:\Evidencias\Phishing\Nomina_Simulada.txt" -Algorithm SHA256
+Get-FileHash "C:\Evidencias\BackupPrueba\Nomina_Simulada.txt" -Algorithm SHA256
+```
+
+**Resultado:** ambos archivos mostraron el mismo SHA-256.
+
+**Fase 2: simular pérdida, restaurar y verificar.**
+
+```powershell
+$original = "C:\Evidencias\Phishing\Nomina_Simulada.txt"
+$backup = "C:\Evidencias\BackupPrueba\Nomina_Simulada.txt"
+$hashBackup = (Get-FileHash $backup -Algorithm SHA256).Hash
+Remove-Item $original
+Copy-Item $backup $original
+$hashRestaurado = (Get-FileHash $original -Algorithm SHA256).Hash
+Write-Host "Restauración correcta: $($hashBackup -eq $hashRestaurado)"
+```
+
+**Resultado observado:** `Restauración correcta: True`. Los hashes del archivo copiado y restaurado coincidieron, lo que demuestra la integridad de esa restauración de prueba.
+
+**Captura:** `P4_04_VerificacionRecuperacion.png` (pendiente de subir).
+
+![Restauración correcta comprobada con hash](../evidencias/P4_04_VerificacionRecuperacion.png)
+
+**Relación con el incidente:** tras contener y eliminar una amenaza, la empresa debe restaurar copias verificadas. Este ejercicio únicamente demuestra la recuperación de **un archivo inocuo**, no la restauración completa de un sistema infectado.
